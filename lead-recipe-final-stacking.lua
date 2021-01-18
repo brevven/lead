@@ -1,0 +1,18 @@
+-- Deadlock stacking recipes
+if deadlock then
+  deadlock.add_stack("lead-ore",  "__bzlead__/graphics/icons/lead-ore-stacked.png", "deadlock-stacking-1", 64)
+  deadlock.add_stack("lead-plate", "__bzlead__/graphics/icons/lead-plate-stacked.png" , "deadlock-stacking-1", 64)
+  if mods["Krastorio2"] then
+    deadlock.add_stack("enriched-lead", "__bzlead__/graphics/icons/enriched-lead-stacked.png" , "deadlock-stacking-1", 64)
+  end
+end
+
+-- Deadlock crating recipes
+if deadlock_crating then
+  deadlock_crating.add_crate("lead-ore", "deadlock-crating-1")
+  deadlock_crating.add_crate("lead-plate", "deadlock-crating-1")
+  if mods["Krastorio2"] then
+    deadlock_crating.add_crate("enriched-lead", "deadlock-crating-1")
+  end
+end
+
