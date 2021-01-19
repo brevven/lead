@@ -32,4 +32,8 @@ if mods["space-exploration"] then
   util.add_ingredient("industrial-furnace", "lead-plate", 20)
 
   util.add_ingredient("se-material-testing-pack", "lead-plate", 1)
+
+  -- Organization
+  data.raw.item["lead-plate"].subgroup = "plates"
+  data.raw.recipe["lead-plate"].subgroup = "plates"
 end
