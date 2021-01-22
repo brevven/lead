@@ -60,6 +60,5 @@ if mods["space-exploration"] then
     })
     table.insert(data.raw.technology["se-processing-vulcanite"].effects, 
         {type = "unlock-recipe", recipe= "lead-smelting-vulcanite"})
-    util.add_lead_prerequisite(data.raw.technology["se-processing-vulcanite"])
   end
 end
