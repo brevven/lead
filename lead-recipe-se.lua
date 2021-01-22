@@ -2,6 +2,8 @@
 local util = require("__bzlead__.util");
 
 if mods["space-exploration"] then
+  se_delivery_cannon_recipes[util.lead_ore] = {name= util.lead_ore}
+  se_delivery_cannon_recipes[util.lead_plate] = {name= util.lead_plate}
   if mods["Krastorio2"] then
     data:extend({
     {
@@ -31,6 +33,7 @@ if mods["space-exploration"] then
     table.insert(data.raw.technology["se-processing-vulcanite"].effects, 
         {type = "unlock-recipe", recipe= "enriched-lead-smelting-vulcanite"})
     data.raw.recipe["enriched-lead-plate"].order= "d[lead-plate]"
+    se_delivery_cannon_recipes["enriched-lead"] = {name= "enriched-lead"}
   else
     data:extend({
     {
