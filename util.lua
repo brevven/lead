@@ -33,9 +33,11 @@ end
 
 -- Add a given quantity of ingredient to a given recipe
 function util.add_ingredient(recipe_name, ingredient, quantity)
-  add_ingredient(data.raw.recipe[recipe_name], ingredient, quantity)
-  add_ingredient(data.raw.recipe[recipe_name].normal, ingredient, quantity)
-  add_ingredient(data.raw.recipe[recipe_name].expensive, ingredient, quantity)
+  if data.raw.recipe[recipe_name] then
+    add_ingredient(data.raw.recipe[recipe_name], ingredient, quantity)
+    add_ingredient(data.raw.recipe[recipe_name].normal, ingredient, quantity)
+    add_ingredient(data.raw.recipe[recipe_name].expensive, ingredient, quantity)
+  end
 end
 
 function add_ingredient(recipe, ingredient, quantity)
@@ -44,11 +46,13 @@ function add_ingredient(recipe, ingredient, quantity)
   end
 end
 
--- Replace one ingredien with another in a recipe
+-- Replace one ingredient with another in a recipe
 function util.replace_ingredient(recipe_name, old, new)
-   replace_ingredient(data.raw.recipe[recipe_name], old, new)
-   replace_ingredient(data.raw.recipe[recipe_name].normal, old, new)
-   replace_ingredient(data.raw.recipe[recipe_name].expensive, old, new)
+  if data.raw.recipe[recipe_name] then
+    replace_ingredient(data.raw.recipe[recipe_name], old, new)
+    replace_ingredient(data.raw.recipe[recipe_name].normal, old, new)
+    replace_ingredient(data.raw.recipe[recipe_name].expensive, old, new)
+  end
 end
 
 function replace_ingredient(recipe, old, new)
@@ -64,9 +68,11 @@ end
 
 -- Remove an ingredient from a recipe
 function util.remove_ingredient(recipe_name, old)
-  remove_ingredient(data.raw.recipe[recipe_name], old)
-  remove_ingredient(data.raw.recipe[recipe_name].normal, old)
-  remove_ingredient(data.raw.recipe[recipe_name].expensive, old)
+  if data.raw.recipe[recipe_name] then
+    remove_ingredient(data.raw.recipe[recipe_name], old)
+    remove_ingredient(data.raw.recipe[recipe_name].normal, old)
+    remove_ingredient(data.raw.recipe[recipe_name].expensive, old)
+  end
 end
 
 function remove_ingredient(recipe, old)
@@ -87,9 +93,11 @@ end
 
 -- Replace an amount of an ingredient in a recipe. Keep at least 1 of old.
 function util.replace_some_ingredient(recipe_name, old, new, amount)
-  replace_some_ingredient(data.raw.recipe[recipe_name], old, new, amount)
-  replace_some_ingredient(data.raw.recipe[recipe_name].normal, old, new, amount)
-  replace_some_ingredient(data.raw.recipe[recipe_name].expensive, old, new, amount)
+  if data.raw.recipe[recipe_name] then
+    replace_some_ingredient(data.raw.recipe[recipe_name], old, new, amount)
+    replace_some_ingredient(data.raw.recipe[recipe_name].normal, old, new, amount)
+    replace_some_ingredient(data.raw.recipe[recipe_name].expensive, old, new, amount)
+  end
 end
 
 function replace_some_ingredient(recipe, old, new, amount)
