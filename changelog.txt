@@ -1,9 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.1.5
-Date: 2021-01-24
-  Changes: 
-    - Lead used to make colored items for some mods.
-    - Update Krastorio 2 matter tech icon.
+Version: 0.2.0
+Date: 2021-01-25
+  Features: 
+    - 5dims compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2021-01-22

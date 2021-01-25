@@ -47,8 +47,8 @@ data:extend(
       energy_required = 12.8,
       ingredients = {{"lead-ore", 4}},
       results = {
-        {type="item", name = util.lead_plate, amount=2, probability=0.8333},
-        {type="item", name = "copper-ore", amount=2, probability=0.333},
+        {type="item", name = util.lead_plate, amount=2, probability=5/6},
+        {type="item", name = "copper-ore", amount=2, probability=1/3},
       }
     }
   },
