@@ -3,6 +3,17 @@ local util = {}
 util.lead_ore = "lead-ore"
 util.lead_plate = "lead-plate"
 
+function util.get_setting(name)
+  if settings.startup[name] == nil then
+    return nil
+  end
+  return settings.startup[name].value
+end
+
+function util.more_entities()
+  return util.get_setting("bzlead-more-entities") == "yes"
+end
+
 function util.get_stack_size(default) 
   if mods["Krastorio2"] then
     size = tonumber(krastorio.general.getSafeSettingValue("kr-stack-size"))
