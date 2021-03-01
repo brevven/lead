@@ -3,8 +3,12 @@ local util = {}
 util.lead_ore = "lead-ore"
 util.lead_plate = "lead-plate"
 
-function util.get_k2_stack_size() 
-  return tonumber(krastorio.general.getSafeSettingValue("kr-stack-size"))
+function util.get_stack_size(default) 
+  if mods["Krastorio2"] then
+    size = tonumber(krastorio.general.getSafeSettingValue("kr-stack-size"))
+    return size or default
+  end
+  return default
 end
 
 -- check if a table contains a sought value
