@@ -10,12 +10,12 @@ data:extend(
     icons =
     {
       {
-        icon =   "__Krastorio2__/graphics/technologies/matter-stone.png",
+        icon = "__Krastorio2__/graphics/technologies/matter-stone.png",
         icon_size = 256,
       },
       {
         icon = "__bzlead__/graphics/icons/lead-ore.png",
-        icon_size = 64,
+        icon_size = 64, icon_mipmaps = 3,
         scale = 1.25,
       }
     },

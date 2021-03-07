@@ -1,9 +1,9 @@
 -- Deadlock stacking recipes
 if deadlock then
-  deadlock.add_stack("lead-ore",  "__bzlead__/graphics/icons/lead-ore-stacked.png", "deadlock-stacking-1", 64)
-  deadlock.add_stack("lead-plate", "__bzlead__/graphics/icons/lead-plate-stacked.png" , "deadlock-stacking-1", 64)
+  deadlock.add_stack("lead-ore",  "__bzlead__/graphics/icons/stacked/lead-ore-stacked.png", "deadlock-stacking-1", 64)
+  deadlock.add_stack("lead-plate", "__bzlead__/graphics/icons/stacked/lead-plate-stacked.png" , "deadlock-stacking-1", 64)
   if mods["Krastorio2"] then
-    deadlock.add_stack("enriched-lead", "__bzlead__/graphics/icons/enriched-lead-stacked.png" , "deadlock-stacking-1", 64)
+    deadlock.add_stack("enriched-lead", "__bzlead__/graphics/icons/stacked/enriched-lead-stacked.png" , "deadlock-stacking-1", 64)
   end
 end
 
