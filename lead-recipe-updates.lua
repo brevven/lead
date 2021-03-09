@@ -26,3 +26,24 @@ if mods["Krastorio2"] then
 -- todo
 end
 
+if mods["WeaponPack"] then
+  util.replace_ingredient("9x18", "iron-plate", "lead-plate")
+  util.replace_some_ingredient("9x19", "iron-plate", "lead-plate", 1)
+  util.replace_some_ingredient("7,62x25", "iron-plate", "lead-plate", 9)
+  util.replace_some_ingredient("7,62x51", "iron-plate", "lead-plate", 11)
+  util.replace_some_ingredient("5,56x45", "iron-plate", "lead-plate", 9)
+  util.replace_some_ingredient("5,45x39", "iron-plate", "lead-plate", 7)
+  util.replace_some_ingredient("5,7x28", "iron-plate", "lead-plate", 7)
+  util.replace_some_ingredient("5,7 × 28", "iron-plate", "lead-plate", 7)
+  util.replace_some_ingredient("357", "iron-plate", "lead-plate", 9)
+  util.replace_some_ingredient("45acp", "iron-plate", "lead-plate", 7)
+  util.replace_some_ingredient("12gauge", "iron-plate", "lead-plate", 3)
+end
+
+if mods["eve-weaponry"] then
+  util.replace_ingredient("small-carbonized-lead", "iron-plate", "lead-plate")
+end
+
+if data.raw.recipe["zinfinite_buffer_fluid_tank1"] then
+  util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", "lead-plate", 1000)
+end

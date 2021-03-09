@@ -61,6 +61,34 @@ data:extend(
     order = "b[lead-plate]",
     stack_size = util.get_stack_size(100)
   },
+  mods["TheBigFurnace"] and {
+    type = "recipe",
+    name = "big-lead-plate",
+    icons = { { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64 }, },
+    subgroup = "raw-material",
+    category = "big-smelting",
+    order = "d[lead-plate]",
+    normal =
+    {
+      enabled = true,
+      energy_required = 7,
+      ingredients = {{"lead-ore", 100}},
+      results = {
+        {type="item", name = util.lead_plate, amount=100, probability=5/6},
+        {type="item", name = "copper-ore", amount=50, probability=1/3},
+      }
+    },
+    expensive =
+    {
+      enabled = true,
+      energy_required = 17.5,
+      ingredients = {{"lead-ore", 100}},
+      results = {
+        {type="item", name = util.lead_plate, amount=50, probability=5/6},
+        {type="item", name = "copper-ore", amount=25, probability=1/3},
+      }
+    }
+  } or nil,
 }
 )
 end

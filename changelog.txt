@@ -5,6 +5,22 @@ Date: 2021-03-07
     - Graphics revamp by snouz (new icons, entities, chest remnant, mipmaps)
     - New mod icon
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.6
+Date: 2021-03-06
+  Features:
+    - Inifinite Buffer Fluid Tank recipe
+    - eve-weaponry recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 2021-03-06
+  Features:
+    - WeaponPack recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 2021-03-06
+  Features:
+    - The Big Furnace recipe
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 2021-02-28
   Features:
