@@ -73,7 +73,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version =
           {
-            filename = "__bzlead__/graphics/entity/hr-lead-chest-shadow",
+            filename = "__bzlead__/graphics/entity/hr-lead-chest-shadow.png",
             priority = "extra-high",
             width = 110,
             height = 50,
