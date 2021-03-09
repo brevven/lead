@@ -8,7 +8,7 @@ data:extend({
     type = "item",
     name = "lead-chest",
     icon = "__bzlead__/graphics/icons/lead-chest.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 3,
     subgroup = "storage",
     order = "a[items]-az[lead-chest]",
     place_result = "lead-chest",
@@ -25,7 +25,7 @@ data:extend({
     type = "container",
     name = "lead-chest",
     icon = "__bzlead__/graphics/icons/lead-chest.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 3,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.2, result = "lead-chest"},
     max_health = 150,
@@ -65,7 +65,7 @@ data:extend({
           }
         },
         {
-          filename = "__base__/graphics/entity/iron-chest/iron-chest-shadow.png",
+          filename = "__bzlead__/graphics/entity/lead-chest-shadow.png",
           priority = "extra-high",
           width = 56,
           height = 26,
@@ -73,7 +73,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version =
           {
-            filename = "__base__/graphics/entity/iron-chest/hr-iron-chest-shadow.png",
+            filename = "__bzlead__/graphics/entity/hr-lead-chest-shadow",
             priority = "extra-high",
             width = 110,
             height = 50,
@@ -91,8 +91,8 @@ data:extend({
   {
     type = "corpse",
     name = "lead-chest-remnants",
-    icon = "__base__/graphics/icons/iron-chest.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__bzlead__/graphics/icons/lead-chest.png",
+    icon_size = 64, icon_mipmaps = 3,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     subgroup = "storage-remnants",
     order = "a-b-a",
@@ -105,7 +105,7 @@ data:extend({
     remove_on_tile_placement = false,
     animation =
     {
-      filename = "__base__/graphics/entity/iron-chest/remnants/iron-chest-remnants.png",
+      filename = "__bzlead__/graphics/entity/lead-chest-remnants.png",
       line_length = 1,
       width = 64,
       height = 40,
@@ -114,7 +114,7 @@ data:extend({
       shift = util.by_pixel(12, 0),
       hr_version =
       {
-        filename = "__base__/graphics/entity/iron-chest/remnants/hr-iron-chest-remnants.png",
+        filename = "__bzlead__/graphics/entity/hr-lead-chest-remnants.png",
         line_length = 1,
         width = 126,
         height = 78,

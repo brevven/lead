@@ -9,12 +9,13 @@ data:extend(
     name = "enriched-lead",
     icon_size = 64,
     icon = "__bzlead__/graphics/icons/enriched-lead.png",
-      pictures = {
-        {filename="__bzlead__/graphics/icons/enriched-lead.png", size=64, scale=0.25},
-        {filename="__bzlead__/graphics/icons/enriched-lead-2.png", size=64, scale=0.25},
-        {filename="__bzlead__/graphics/icons/enriched-lead-3.png", size=64, scale=0.25},
-        {filename="__bzlead__/graphics/icons/enriched-lead-4.png", size=64, scale=0.25},
-      },
+    icon_mipmaps = 3,
+    pictures = {
+      {filename="__bzlead__/graphics/icons/enriched-lead.png", size=64, scale=0.25},
+      {filename="__bzlead__/graphics/icons/enriched-lead-1.png", size=64, scale=0.25},
+      {filename="__bzlead__/graphics/icons/enriched-lead-2.png", size=64, scale=0.25},
+      {filename="__bzlead__/graphics/icons/enriched-lead-3.png", size=64, scale=0.25},
+    },
     subgroup = "raw-material",
     order = "e05-a[enriched-ores]-a1[enriched-lead]",
     stack_size = util.get_stack_size(100)
@@ -24,6 +25,7 @@ data:extend(
     name = "enriched-lead",
     icon = "__bzlead__/graphics/icons/enriched-lead.png",
     icon_size = 64,
+    icon_mipmaps = 3,
     category = "chemistry",
     energy_required = 3,
     enabled = false,
@@ -57,8 +59,8 @@ data:extend(
       name = "enriched-lead-plate",
       icons =
       {
-        { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64 },
-        { icon = "__bzlead__/graphics/icons/enriched-lead.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
+        { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3 },
+        { icon = "__bzlead__/graphics/icons/enriched-lead.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
       },
       category = "smelting",
       energy_required = 16,

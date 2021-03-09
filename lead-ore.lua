@@ -16,7 +16,7 @@ data:extend({
 	},
 	{
     type = "resource",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 3,
     name = "lead-ore",
     icon = "__bzlead__/graphics/icons/lead-ore.png",
     flags = {"placeable-neutral"},
@@ -66,13 +66,13 @@ data:extend({
   {
       type = "item",
       name = "lead-ore",
-      icon_size = 64,
+      icon_size = 64, icon_mipmaps = 3,
       icon = "__bzlead__/graphics/icons/lead-ore.png",
       pictures = {
         {filename="__bzlead__/graphics/icons/lead-ore.png", size=64, scale=0.25},
+        {filename="__bzlead__/graphics/icons/lead-ore-1.png", size=64, scale=0.25},
         {filename="__bzlead__/graphics/icons/lead-ore-2.png", size=64, scale=0.25},
         {filename="__bzlead__/graphics/icons/lead-ore-3.png", size=64, scale=0.25},
-        {filename="__bzlead__/graphics/icons/lead-ore-4.png", size=64, scale=0.25},
       },
       subgroup = "raw-resource",
       order = "t-c-a",

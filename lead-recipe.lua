@@ -16,10 +16,10 @@ data:extend(
     order = "d[lead-plate]",
     icons = (mods["Krastorio2"] and
         {
-          { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64 },
-          { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
+          { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3, },
+          { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
         } or {
-          { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64 },
+          { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3, },
         }
 ),
     normal = (mods["Krastorio2"] and
@@ -56,7 +56,7 @@ data:extend(
     type = "item",
     name = util.lead_plate,
     icon = "__bzlead__/graphics/icons/lead-plate.png",
-    icon_size = 64,
+    icon_size = 64, icon_mipmaps = 3,
     subgroup = "raw-material",
     order = "b[lead-plate]",
     stack_size = util.get_stack_size(100)
