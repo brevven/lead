@@ -47,3 +47,15 @@ end
 if data.raw.recipe["zinfinite_buffer_fluid_tank1"] then
   util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", "lead-plate", 1000)
 end
+
+if data.raw.recipe["storage-tank2"] then
+  util.add_ingredient("storage-tank2", "lead-plate", 32)
+end
+
+if data.raw.recipe["advanced-substation"] then
+  util.add_ingredient("advanced-substation", "lead-plate", 20)
+end
+
+if data.raw.recipe["advanced-accumulator"] then
+  util.add_ingredient("advanced-accumulator", "lead-plate", 16)
+end
