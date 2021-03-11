@@ -1,4 +1,5 @@
 local resource_autoplace = require('resource-autoplace');
+local noise = require('noise');
 
 local util = require("__bzlead__.util");
 
@@ -35,10 +36,11 @@ data:extend({
     autoplace = resource_autoplace.resource_autoplace_settings{
       name = "lead-ore",
       order = "b-z",
-      base_density = 5,
+      base_density = 6,
+      base_spots_per_km2 = 1,
       has_starting_area_placement = true,
-      regular_rq_factor_multiplier = 1.3,
-      starting_rq_factor_multiplier = 1.7
+      regular_rq_factor_multiplier = 1.2,
+      starting_rq_factor_multiplier = 1.7,
     },
 
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
@@ -80,3 +82,15 @@ data:extend({
   },
 })
 
+local richness = data.raw.resource["lead-ore"].autoplace.richness_expression  
+
+-- Modify lead autoplace richness: 
+-- Up to 200 tiles it's standard
+-- From 200 to 700 tiles, richness scales linearly down, until
+-- From 700 tiles onward, it's about 1/6th the richness.
+data.raw.resource["lead-ore"].autoplace.richness_expression = 
+  richness * noise.if_else_chain(
+      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(200)), 1,
+      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(700)), 
+        100 / (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) - 100),
+      0.17)

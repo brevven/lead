@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
+Date: 2021-03-10
+  Changes:
+    - Slightly increase starting area lead, greatly reduce distant lead.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
 Date: 2021-03-09
   Features:
     - SimpleCompress support
