@@ -15,6 +15,9 @@ if (not mods["bobplates"] and not mods["angelssmelting"]) then
   util.add_ingredient("electric-furnace", "lead-plate", 5)
   util.add_ingredient("solar-panel", "lead-plate", 5)
 
+  util.add_ingredient("flamethrower-turret", "lead-plate", 5)
+  util.add_ingredient("artillery-turret", "lead-plate", 40)
+
   -- ammunition
   util.replace_ingredient("firearm-magazine", "iron-plate", "lead-plate")
   util.replace_ingredient("shotgun-shell", "iron-plate", "lead-plate")
@@ -56,6 +59,17 @@ if data.raw.recipe["advanced-substation"] then
   util.add_ingredient("advanced-substation", "lead-plate", 20)
 end
 
+if data.raw.recipe["substation-2"] then
+  util.add_ingredient("advanced-substation", "lead-plate", 20)
+end
+
 if data.raw.recipe["advanced-accumulator"] then
   util.add_ingredient("advanced-accumulator", "lead-plate", 16)
+end
+
+if data.raw.recipe["vtk-cannon-turret"] then
+  util.add_ingredient("vtk-cannon-turret", "lead-plate", 20)
+end
+if data.raw.recipe["vtk-cannon-turret-heavy"] then
+  util.add_ingredient("vtk-cannon-turret-heavy", "lead-plate", 30)
 end
