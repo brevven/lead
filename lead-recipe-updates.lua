@@ -26,7 +26,9 @@ end
 
 -- Krastorio 2 changes
 if mods["Krastorio2"] then
--- todo
+  util.add_ingredient("kr-laser-artillery-turret", "lead-plate", 10)
+  util.add_ingredient("kr-railgun-turret", "lead-plate", 10)
+  util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
 end
 
 if mods["WeaponPack"] then
