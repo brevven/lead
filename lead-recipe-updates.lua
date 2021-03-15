@@ -49,29 +49,16 @@ if mods["eve-weaponry"] then
   util.replace_ingredient("small-carbonized-lead", "iron-plate", "lead-plate")
 end
 
-if data.raw.recipe["zinfinite_buffer_fluid_tank1"] then
-  util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", "lead-plate", 1000)
-end
 
-if data.raw.recipe["storage-tank2"] then
-  util.add_ingredient("storage-tank2", "lead-plate", 32)
-end
+-- Other one-offs
+util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", "lead-plate", 1000)
+util.add_ingredient("storage-tank2", "lead-plate", 32)
+util.add_ingredient("advanced-substation", "lead-plate", 20)
+util.add_ingredient("substation-2", "lead-plate", 20)
+util.add_ingredient("advanced-accumulator", "lead-plate", 16)
 
-if data.raw.recipe["advanced-substation"] then
-  util.add_ingredient("advanced-substation", "lead-plate", 20)
-end
+util.add_ingredient("vtk-cannon-turret", "lead-plate", 20)
+util.add_ingredient("vtk-cannon-turret-heavy", "lead-plate", 30)
 
-if data.raw.recipe["substation-2"] then
-  util.add_ingredient("advanced-substation", "lead-plate", 20)
-end
-
-if data.raw.recipe["advanced-accumulator"] then
-  util.add_ingredient("advanced-accumulator", "lead-plate", 16)
-end
-
-if data.raw.recipe["vtk-cannon-turret"] then
-  util.add_ingredient("vtk-cannon-turret", "lead-plate", 20)
-end
-if data.raw.recipe["vtk-cannon-turret-heavy"] then
-  util.add_ingredient("vtk-cannon-turret-heavy", "lead-plate", 30)
-end
+util.add_ingredient("w93-modular-turret-base", "lead-plate", 8)
+util.add_ingredient("w93-modular-turret2-base", "lead-plate", 4)

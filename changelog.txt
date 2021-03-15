@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 2021-03-14
+  Features:
+    - Modular turret mount recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: 2021-03-11
+Date: 2021-03-12
   Features:
     - VTK Cannon Turret recipes
     - Vanilla Flamethrower and Artillery Turret recipes
