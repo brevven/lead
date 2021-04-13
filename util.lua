@@ -24,8 +24,6 @@ end
 
 -- check if a table contains a sought value
 function util.contains(table, sought)
-log(serpent.dump(table))
-log(sought)
   for i, value in pairs(table) do
     if value == sought then
       return true
