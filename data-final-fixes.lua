@@ -29,6 +29,13 @@ if mods["Krastorio2"] then
   util.replace_some_ingredient("kr-fluid-storage-2", "steel-plate", "lead-plate", 30)
 end
 
+if mods["modmashsplintergold"] then
+  if mods["Krastorio2"] then 
+    util.replace_ingredient("rifle-magazine-with-gold", "iron-plate", "lead-plate")
+    util.replace_ingredient("anti-material-rifle-magazine-with-gold", "iron-plate", "lead-plate")
+  end
+end
+
 if mods["space-exploration"] then 
   util.replace_some_ingredient("se-pulveriser", "iron-plate", "lead-plate", 10)
   util.replace_some_ingredient("se-canister", "copper-plate", "lead-plate", 5)
