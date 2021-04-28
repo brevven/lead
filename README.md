@@ -15,3 +15,5 @@ See changelog.txt
 
 ### Localization
 - [Sakuro](https://github.com/sakuro) (ja)
+- [TheoMarque](https://github.com/TheoMarque) (pl)
+- [Spectrus1702](https://github.com/Spectrus1702) (ru)
