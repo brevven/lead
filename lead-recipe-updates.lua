@@ -46,6 +46,10 @@ if mods["WeaponPack"] then
   util.replace_some_ingredient("12gauge", "iron-plate", "lead-plate", 3)
 end
 
+if mods["More_Ammo"] then
+  util.replace_ingredient("sp-ammo-recipe", "iron-plate", "lead-plate")
+end
+
 if mods["eve-weaponry"] then
   util.replace_ingredient("small-carbonized-lead", "iron-plate", "lead-plate")
 end
@@ -63,3 +67,28 @@ util.add_ingredient("vtk-cannon-turret-heavy", "lead-plate", 30)
 
 util.add_ingredient("w93-modular-turret-base", "lead-plate", 8)
 util.add_ingredient("w93-modular-turret2-base", "lead-plate", 4)
+
+
+-- rampant arsenal
+util.add_ingredient("rifle-item-rampant-arsenal", "lead-plate", 10)
+util.add_ingredient("shotgun-item-rampant-arsenal", "lead-plate", 10)
+util.add_ingredient("rocket-item-rampant-arsenal", "lead-plate", 10)
+util.add_ingredient("rapid-rocket-item-rampant-arsenal", "lead-plate", 10)
+util.add_ingredient("cannon-item-rampant-arsenal", "lead-plate", 20)
+util.add_ingredient("rapid-cannon-item-rampant-arsenal", "lead-plate", 20)
+util.add_ingredient("suppression-cannon-item-rampant-arsenal", "lead-plate", 30)
+util.add_ingredient("capsule-item-rampant-arsenal", "lead-plate", 10)
+util.add_ingredient("lite-artillery-turret-rampant-arsenal", "lead-plate", 20)
+
+
+-- Light artillery
+util.add_ingredient("derpy-artillery", "lead-plate", 20)
+-- Bigger artillery
+util.add_ingredient("big-artillery-turret", "lead-plate", 100)
+-- Heavy Machine Gun Turret
+util.add_ingredient("kr-heavy-machine-gun-turret", "lead-plate", 10)
+
+
+-- Geothermal
+util.add_ingredient("geothermal-well", "lead-plate", 120)
+
