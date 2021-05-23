@@ -67,8 +67,8 @@ data:extend({
         {
           filename = "__bzlead__/graphics/entity/lead-chest-shadow.png",
           priority = "extra-high",
-          width = 56,
-          height = 26,
+          width = 55,
+          height = 25,
           shift = util.by_pixel(10, 6.5),
           draw_as_shadow = true,
           hr_version =
@@ -107,8 +107,8 @@ data:extend({
     {
       filename = "__bzlead__/graphics/entity/lead-chest-remnants.png",
       line_length = 1,
-      width = 64,
-      height = 40,
+      width = 63,
+      height = 39,
       frame_count = 1,
       direction_count = 1,
       shift = util.by_pixel(12, 0),
