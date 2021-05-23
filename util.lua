@@ -14,6 +14,10 @@ function util.more_entities()
   return util.get_setting("bzlead-more-entities") == "yes"
 end
 
+function util.sulfuric()
+  return util.get_setting("bzlead-sulfuric") == "yes"
+end
+
 function util.get_stack_size(default) 
   if mods["Krastorio2"] then
     size = tonumber(krastorio.general.getSafeSettingValue("kr-stack-size"))
