@@ -29,13 +29,14 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   util.replace_ingredient("shotgun-shell", "iron-plate", "lead-plate")
 end
 
-
 -- Krastorio 2 changes
 if mods["Krastorio2"] then
   util.add_ingredient("kr-laser-artillery-turret", "lead-plate", 10)
   util.add_ingredient("kr-railgun-turret", "lead-plate", 10)
   util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
 end
+
+util.add_product("se-scrap-recycling", {name="lead-ore", amount=1, probability=0.1})
 
 if mods["WeaponPack"] then
   util.replace_ingredient("9x18", "iron-plate", "lead-plate")

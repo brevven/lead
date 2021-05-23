@@ -133,4 +133,20 @@ function replace_some_ingredient(recipe, old, new, amount)
 	end
 end
 
+-- Add a given quantity of product to a given recipe. 
+-- Only works for recipes with multiple products
+function util.add_product(recipe_name, product)
+  if data.raw.recipe[recipe_name] then
+    add_product(data.raw.recipe[recipe_name], product)
+    add_product(data.raw.recipe[recipe_name].normal, product)
+    add_product(data.raw.recipe[recipe_name].expensive, product)
+  end
+end
+
+function add_product(recipe, product)
+  if recipe ~= nil and recipe.results ~= nil then
+    table.insert(recipe.results, product)
+  end
+end
+
 return util
