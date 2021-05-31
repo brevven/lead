@@ -14,14 +14,14 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   end
 
   util.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
-  util.replace_some_ingredient("gun-turret", "iron-plate", "lead-plate", 5)
+  util.replace_some_ingredient("gun-turret", "iron-plate", "lead-plate", 4)
 
   util.add_ingredient("big-electric-pole", "lead-plate", 2)
   util.add_ingredient("substation", "lead-plate", 2)
-  util.add_ingredient("electric-furnace", "lead-plate", 5)
+  util.add_ingredient("electric-furnace", "lead-plate", 4)
   util.add_ingredient("solar-panel", "lead-plate", 5)
 
-  util.add_ingredient("flamethrower-turret", "lead-plate", 5)
+  util.add_ingredient("flamethrower-turret", "lead-plate", 4)
   util.add_ingredient("artillery-turret", "lead-plate", 40)
 
   -- ammunition
