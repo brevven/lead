@@ -60,6 +60,15 @@ if mods["eve-weaponry"] then
   util.replace_ingredient("small-carbonized-lead", "iron-plate", "lead-plate")
 end
 
+util.add_ingredient("howitzer-turret-recipe","lead-plate", 8)
+
+-- Additional turrets
+util.add_ingredient("at-acidthrower-turret","lead-plate", 4)
+util.add_ingredient("at-cannon-turret-mk1","lead-plate", 4)
+util.add_ingredient("at-rocket-turret-mk1","lead-plate", 4)
+util.replace_ingredient("small-coal-cannon-shell", "copper-plate", "lead-plate")
+util.replace_ingredient("small-coal-cannon-shell", "copper-plate", "lead-plate")
+util.add_ingredient("at_A1_b","lead-plate", 20)
 
 -- Other one-offs
 util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", "lead-plate", 1000)
