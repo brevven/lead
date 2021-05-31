@@ -94,6 +94,12 @@ util.add_ingredient("big-artillery-turret", "lead-plate", 100)
 -- Heavy Machine Gun Turret
 util.add_ingredient("kr-heavy-machine-gun-turret", "lead-plate", 10)
 
+-- King Jo
+util.replace_ingredient("bolt75mk1", "steel-plate", "lead-plate")
+util.replace_some_ingredient("bolt100mk1", "steel-plate", "lead-plate", 3)
+util.replace_some_ingredient("bolt75metalstorm", "steel-plate", "lead-plate", 2)
+util.replace_some_ingredient("bolt100metalstorm", "steel-plate", "lead-plate", 5)
+
 
 -- Geothermal
 util.add_ingredient("geothermal-well", "lead-plate", 120)
