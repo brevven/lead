@@ -98,3 +98,11 @@ util.add_ingredient("kr-heavy-machine-gun-turret", "lead-plate", 10)
 -- Geothermal
 util.add_ingredient("geothermal-well", "lead-plate", 120)
 
+-- Nuclear furnace
+util.add_ingredient("nuclear-furnace-1", "lead-plate", 200)
+util.add_ingredient("nuclear-furnace-2", "lead-plate", 200)
+
+-- Mega furnace
+util.add_ingredient("mega-furnace", "lead-plate", 5)
+
+

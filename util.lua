@@ -75,9 +75,7 @@ end
 function replace_ingredient(recipe, old, new)
 	if recipe ~= nil and recipe.ingredients ~= nil then
 		for i, ingredient in pairs(recipe.ingredients) do 
-			-- For final fixes
 			if ingredient.name == old then ingredient.name = new end
-			-- For updates
 			if ingredient[1] == old then ingredient[1] = new end
 		end
 	end
@@ -120,11 +118,9 @@ end
 function replace_some_ingredient(recipe, old, new, amount)
 	if recipe ~= nil and recipe.ingredients ~= nil then
 		for i, ingredient in pairs(recipe.ingredients) do 
-			-- For final fixes
 			if ingredient.name == old then
         ingredient.amount = math.max(1, ingredient.amount - amount)
       end
-			-- For updates
 			if ingredient[1] == old then
         ingredient[2] = math.max(1, ingredient[2] - amount)
       end
