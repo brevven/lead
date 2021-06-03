@@ -39,7 +39,7 @@ end
 if mods["space-exploration"] then 
   util.replace_some_ingredient("se-pulveriser", "iron-plate", "lead-plate", 10)
   util.replace_some_ingredient("se-canister", "copper-plate", "lead-plate", 5)
-  util.add_ingredient("industrial-furnace", "lead-plate", 20)
+  util.add_ingredient("industrial-furnace", "lead-plate", 16)
 
   util.add_ingredient("se-material-testing-pack", "lead-plate", 1)
   util.add_ingredient("se-space-radiation-laboratory", "lead-plate", 100)
