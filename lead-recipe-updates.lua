@@ -118,6 +118,9 @@ util.add_ingredient("nuclear-furnace-1", "lead-plate", 200)
 util.add_ingredient("nuclear-furnace-2", "lead-plate", 200)
 
 -- Mega furnace
-util.add_ingredient("mega-furnace", "lead-plate", 5)
+util.add_ingredient("mega-furnace", "lead-plate", 4)
+
+util.replace_ingredient("breeder-fuel-cell", "iron-plate", "lead-plate")
+util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
 
 
