@@ -30,11 +30,9 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
 end
 
 -- Krastorio 2 changes
-if mods["Krastorio2"] then
-  util.add_ingredient("kr-laser-artillery-turret", "lead-plate", 10)
-  util.add_ingredient("kr-railgun-turret", "lead-plate", 10)
-  util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
-end
+util.add_ingredient("kr-laser-artillery-turret", "lead-plate", 10)
+util.add_ingredient("kr-railgun-turret", "lead-plate", 10)
+util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
 
 util.add_product("se-scrap-recycling", {name="lead-ore", amount=1, probability=0.1})
 
@@ -124,3 +122,13 @@ util.replace_ingredient("breeder-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
 
 
+-- Endgame Combat
+util.add_ingredient("concussion-turret", "lead-plate", 20)
+util.add_ingredient("sticky-turret", "lead-plate", 4)
+util.add_ingredient("cannon-turret", "lead-plate", 20)
+util.add_ingredient("plasma-turret", "lead-plate", 8)
+
+
+-- Other
+util.add_ingredient("rocket-turret", "lead-plate", 8)
+util.add_ingredient("hl-rocket-turret-recipe", "lead-plate", 20)
