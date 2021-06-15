@@ -110,9 +110,9 @@ if mods["5dim_core"] then
     local items = {"5d-gun-turret-", "5d-gun-turret-big-", "5d-gun-turret-small-"}
     for i, mk in pairs(mks) do
       for j, item in pairs(items) do 
-        util.replace_some_ingredient(item..mk, "iron-plate", "lead-plate", 2)
+        util.replace_some_ingredient(item..mk, "iron-plate", 2, "lead-plate", 2)
       end
-      util.replace_some_ingredient("5d-gun-turret-sniper-"..mk, "steel-plate", "lead-plate", 1)
+      util.replace_some_ingredient("5d-gun-turret-sniper-"..mk, "steel-plate", 1, "lead-plate", 1)
     end
 
   end

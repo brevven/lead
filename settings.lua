@@ -1,5 +1,11 @@
-data:extend(
-{
+data:extend({
+  {
+		type = "string-setting",
+		name = "bzlead-recipe-bypass",
+		setting_type = "startup",
+		default_value = "",
+    allow_blank = true,
+	},
   {
 		type = "string-setting",
 		name = "bzlead-more-entities",

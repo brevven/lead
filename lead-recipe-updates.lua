@@ -5,7 +5,7 @@ local util = require("__bzlead__.util");
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"]) then
   util.replace_ingredient("pipe", "iron-plate", "lead-plate")
   util.replace_ingredient("pipe-to-ground", "iron-plate", "lead-plate")
-  util.replace_some_ingredient("storage-tank", "iron-plate", "lead-plate", 10)
+  util.replace_some_ingredient("storage-tank", "iron-plate", 10, "lead-plate", 10)
   util.replace_ingredient("battery", "iron-plate", "lead-plate")
 
   
@@ -14,7 +14,7 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   end
 
   util.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
-  util.replace_some_ingredient("gun-turret", "iron-plate", "lead-plate", 4)
+  util.replace_some_ingredient("gun-turret", "iron-plate", 4, "lead-plate", 4)
 
   util.add_ingredient("big-electric-pole", "lead-plate", 2)
   util.add_ingredient("substation", "lead-plate", 2)
@@ -38,16 +38,16 @@ util.add_product("se-scrap-recycling", {name="lead-ore", amount=1, probability=0
 
 if mods["WeaponPack"] then
   util.replace_ingredient("9x18", "iron-plate", "lead-plate")
-  util.replace_some_ingredient("9x19", "iron-plate", "lead-plate", 1)
-  util.replace_some_ingredient("7,62x25", "iron-plate", "lead-plate", 9)
-  util.replace_some_ingredient("7,62x51", "iron-plate", "lead-plate", 11)
-  util.replace_some_ingredient("5,56x45", "iron-plate", "lead-plate", 9)
-  util.replace_some_ingredient("5,45x39", "iron-plate", "lead-plate", 7)
-  util.replace_some_ingredient("5,7x28", "iron-plate", "lead-plate", 7)
-  util.replace_some_ingredient("5,7 × 28", "iron-plate", "lead-plate", 7)
-  util.replace_some_ingredient("357", "iron-plate", "lead-plate", 9)
-  util.replace_some_ingredient("45acp", "iron-plate", "lead-plate", 7)
-  util.replace_some_ingredient("12gauge", "iron-plate", "lead-plate", 3)
+  util.replace_some_ingredient("9x19", "iron-plate", 1, "lead-plate", 1)
+  util.replace_some_ingredient("7,62x25", "iron-plate", 9, "lead-plate", 9)
+  util.replace_some_ingredient("7,62x51", "iron-plate", 11, "lead-plate", 11)
+  util.replace_some_ingredient("5,56x45", "iron-plate", 9, "lead-plate", 9)
+  util.replace_some_ingredient("5,45x39", "iron-plate", 7, "lead-plate", 7)
+  util.replace_some_ingredient("5,7x28", "iron-plate", 7, "lead-plate", 7)
+  util.replace_some_ingredient("5,7 × 28", "iron-plate", 7, "lead-plate", 7)
+  util.replace_some_ingredient("357", "iron-plate", 9, "lead-plate", 9)
+  util.replace_some_ingredient("45acp", "iron-plate", 7, "lead-plate", 7)
+  util.replace_some_ingredient("12gauge", "iron-plate", 3, "lead-plate", 3)
 end
 
 if mods["More_Ammo"] then
@@ -69,7 +69,7 @@ util.replace_ingredient("small-coal-cannon-shell", "copper-plate", "lead-plate")
 util.add_ingredient("at_A1_b","lead-plate", 20)
 
 -- Other one-offs
-util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", "lead-plate", 1000)
+util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", 1000, "lead-plate", 1000)
 util.add_ingredient("storage-tank2", "lead-plate", 32)
 util.add_ingredient("advanced-substation", "lead-plate", 20)
 util.add_ingredient("substation-2", "lead-plate", 20)
@@ -103,9 +103,9 @@ util.add_ingredient("kr-heavy-machine-gun-turret", "lead-plate", 10)
 
 -- King Jo
 util.replace_ingredient("bolt75mk1", "steel-plate", "lead-plate")
-util.replace_some_ingredient("bolt100mk1", "steel-plate", "lead-plate", 3)
-util.replace_some_ingredient("bolt75metalstorm", "steel-plate", "lead-plate", 2)
-util.replace_some_ingredient("bolt100metalstorm", "steel-plate", "lead-plate", 5)
+util.replace_some_ingredient("bolt100mk1", "steel-plate", 3, "lead-plate", 3)
+util.replace_some_ingredient("bolt75metalstorm", "steel-plate", 3, "lead-plate", 2)
+util.replace_some_ingredient("bolt100metalstorm", "steel-plate", 5, "lead-plate", 5)
 
 
 -- Geothermal
