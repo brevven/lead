@@ -265,4 +265,14 @@ function multiply_recipe(recipe, multiple)
   end
 end
 
+-- Remove an element of type t and name from data.raw
+function util.remove_raw(t, name)
+  for i, elem in pairs(data.raw[t]) do
+    if elem.name == name then 
+      data.raw[t][i] = nil
+      break
+    end
+  end
+end
+
 return util
