@@ -132,3 +132,16 @@ util.add_ingredient("plasma-turret", "lead-plate", 8)
 -- Other
 util.add_ingredient("rocket-turret", "lead-plate", 8)
 util.add_ingredient("hl-rocket-turret-recipe", "lead-plate", 20)
+
+
+-- Realistic Reactors
+util.add_ingredient("reactor-sarcophagus", "lead-plate", 300)
+
+-- Nuclear locomotive
+util.replace_ingredient("Nuclear_Train", "iron-plate", "lead-plate")
+
+-- Uranium Rework
+util.add_ingredient("uraniumrework-uranium-waste-container", "lead-plate", 25)
+
+-- Schall 
+util.add_ingredient("Schall-radioactive-waste-incinerator", "lead-plate", 25)

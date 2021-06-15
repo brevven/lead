@@ -3,8 +3,8 @@ Version: 0.4.11
 Date: 2021-06-13
   Features:
     - Endgame Combat Compatibility
-    - Rocket turrets
-    - K2 Turrets standalone
+    - Rocket turrets, K2 Turrets standalone
+    - Realistic Reactors, Nuclear Locomotive, Unranium Rework, etc
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.10
 Date: 2021-06-13
