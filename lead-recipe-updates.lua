@@ -118,8 +118,10 @@ util.add_ingredient("nuclear-furnace-2", "lead-plate", 200)
 -- Mega furnace
 util.add_ingredient("mega-furnace", "lead-plate", 4)
 
+-- Nuclear fuel, Plutonium energy
 util.replace_ingredient("breeder-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
+util.replace_ingredient("MOX-fuel", "iron-plate", "lead-plate")
 
 
 -- Endgame Combat
