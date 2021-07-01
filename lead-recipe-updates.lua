@@ -124,6 +124,14 @@ util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("MOX-fuel", "iron-plate", "lead-plate")
 
 
+-- RITEG 
+util.add_ingredient("RITEG-1", "lead-plate", 10)
+util.add_ingredient("RITEG-cyan", "lead-plate", 10)
+util.add_ingredient("RITEG-breeder", "lead-plate", 10)
+
+-- Zane's Car Turret
+util.add_ingredient("car-turret", "lead-plate", 4)
+
 -- Endgame Combat
 util.add_ingredient("concussion-turret", "lead-plate", 20)
 util.add_ingredient("sticky-turret", "lead-plate", 4)
