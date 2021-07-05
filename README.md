@@ -17,4 +17,4 @@ See changelog.txt
 - [Sakuro](https://github.com/sakuro) (ja)
 - [TheoMarque](https://github.com/TheoMarque) (pl)
 - [Spectrus1702](https://github.com/Spectrus1702) (ru)
-- [yokmp](https://mods.factorio.com/user/yokmp) (de)
+- [Yokmp](https://github.com/Yokmp) (de)
