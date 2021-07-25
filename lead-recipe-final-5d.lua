@@ -1,4 +1,4 @@
-local util = require("__bzlead__.util");
+local util = require("__bzlead__.data-util");
 
 if mods["5dim_core"] then
 

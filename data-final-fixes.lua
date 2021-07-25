@@ -7,7 +7,7 @@ require("lead-recipe-final-rrr")
 
 ----
 
-local util = require("__bzlead__.util");
+local util = require("__bzlead__.data-util");
 
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"]) then
 -- If furnaces are treated as furnaces, we need 2 outputs

@@ -1,5 +1,5 @@
-local leadutil = require("__bzlead__.util");
-require("util")
+local leadutil = require("__bzlead__.data-util");
+require("data-util")
 
 if leadutil.me.more_entities() then
 data:extend({

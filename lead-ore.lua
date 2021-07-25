@@ -1,7 +1,7 @@
 local resource_autoplace = require('resource-autoplace');
 local noise = require('noise');
 
-local util = require("__bzlead__.util");
+local util = require("__bzlead__.data-util");
 
 data:extend({
 	{

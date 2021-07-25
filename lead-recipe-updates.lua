@@ -1,6 +1,6 @@
 -- Titanium recipe & tech changes
 --
-local util = require("__bzlead__.util");
+local util = require("__bzlead__.data-util");
 
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
   util.replace_ingredient("pipe", "iron-plate", "lead-plate")

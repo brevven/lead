@@ -1,5 +1,5 @@
 -- Additional recipes if Space Exploration mod is enabled
-local util = require("__bzlead__.util");
+local util = require("__bzlead__.data-util");
 
 if mods["space-exploration"] then
   se_delivery_cannon_recipes[util.me.lead_ore] = {name= util.me.lead_ore}
