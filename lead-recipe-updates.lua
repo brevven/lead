@@ -9,7 +9,7 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   util.replace_ingredient("battery", "iron-plate", "lead-plate")
 
   
-  if util.sulfuric() then
+  if util.me.sulfuric() then
     util.replace_ingredient("sulfuric-acid", "iron-plate", "lead-plate")
   end
 

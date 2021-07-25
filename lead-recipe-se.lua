@@ -2,8 +2,8 @@
 local util = require("__bzlead__.util");
 
 if mods["space-exploration"] then
-  se_delivery_cannon_recipes[util.lead_ore] = {name= util.lead_ore}
-  se_delivery_cannon_recipes[util.lead_plate] = {name= util.lead_plate}
+  se_delivery_cannon_recipes[util.me.lead_ore] = {name= util.me.lead_ore}
+  se_delivery_cannon_recipes[util.me.lead_plate] = {name= util.me.lead_plate}
   if mods["Krastorio2"] then
     data:extend({
     {
@@ -20,7 +20,7 @@ if mods["space-exploration"] then
         {name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.lead_plate, amount = 12},
+        {name = util.me.lead_plate, amount = 12},
       },
       icons =
       {
@@ -50,7 +50,7 @@ if mods["space-exploration"] then
         {name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.lead_plate, amount = 6},
+        {name = util.me.lead_plate, amount = 6},
       },
       icons =
       {

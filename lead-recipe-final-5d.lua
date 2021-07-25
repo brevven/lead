@@ -19,7 +19,7 @@ if mods["5dim_core"] then
       enabled = true,
       energy_required = 65,
       ingredients = {{"lead-ore", 85}},
-      result = util.lead_plate,
+      result = util.me.lead_plate,
       result_count = 100,
     }
   })
@@ -49,7 +49,7 @@ if mods["5dim_core"] then
             ingredients = {
                 {"lead-dust", 1}
             },
-            result = util.lead_plate
+            result = util.me.lead_plate
         },
         {
             type = "recipe",
@@ -79,7 +79,7 @@ if mods["5dim_core"] then
           enabled = true,
           energy_required = 65,
           ingredients = {{"lead-dust", 85}},
-          result = util.lead_plate,
+          result = util.me.lead_plate,
           result_count = 100,
         }
   })
