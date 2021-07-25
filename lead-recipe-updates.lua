@@ -19,7 +19,9 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   util.add_ingredient("big-electric-pole", "lead-plate", 2)
   util.add_ingredient("substation", "lead-plate", 2)
   util.add_ingredient("electric-furnace", "lead-plate", 4)
-  util.add_ingredient("solar-panel", "lead-plate", 5)
+  if not (mods.bzsilicon and util.has_ingredient("solar-panel", "solar-cell")) then
+    util.add_ingredient("solar-panel", "lead-plate", 5)
+  end
 
   util.add_ingredient("flamethrower-turret", "lead-plate", 4)
   util.add_ingredient("artillery-turret", "lead-plate", 40)
@@ -123,6 +125,12 @@ util.replace_ingredient("breeder-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("MOX-fuel", "iron-plate", "lead-plate")
 
+-- True Nukes
+util.replace_ingredient("tritium-breeder-fuel-cell", "iron-plate", "lead-plate")
+
+-- Hazmat suit
+util.add_ingredient("hazmat-suit", "lead-plate", 2)
+util.add_ingredient("mil-grade-fuel-cell", "lead-plate", 10)
 
 -- RITEG 
 util.add_ingredient("RITEG-1", "lead-plate", 10)
@@ -155,3 +163,19 @@ util.add_ingredient("uraniumrework-uranium-waste-container", "lead-plate", 25)
 
 -- Schall 
 util.add_ingredient("Schall-radioactive-waste-incinerator", "lead-plate", 25)
+util.replace_ingredient("Schall-sniper-firearm-magazine", "iron-plate", "lead-plate")
+util.add_ingredient("Schall-rocket-turret", "lead-plate", 8)
+util.add_ingredient("Schall-minigun-turret", "lead-plate", 8)
+util.add_ingredient("Schall-sniper-turret", "lead-plate", 16)
+util.add_ingredient("Schall-force-cannon-turret", "lead-plate", 16)
+util.add_ingredient("Schall-particle-beam-turret", "lead-plate", 16)
+util.add_ingredient("Schall-mega-particle-beam-turret", "lead-plate", 32)
+util.add_ingredient("Schall-particle-cannon-turret", "lead-plate", 32)
+util.add_ingredient("Schall-BFG-turret", "lead-plate", 64)
+util.add_ingredient("Schall-cannon-turret", "lead-plate", 16)
+util.add_ingredient("Schall-autocannon-turret", "lead-plate", 16)
+util.add_ingredient("Schall-cannon-H1-turret", "lead-plate", 16)
+util.add_ingredient("Schall-cannon-H2-turret", "lead-plate", 64)
+
+-- Nuclear Reprocessing Rebalance
+util.replace_product("nuclear-fuel-reprocessing", "iron-plate", "lead-plate")

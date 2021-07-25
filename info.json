@@ -1,6 +1,6 @@
 {
     "name": "bzlead",
-    "version": "0.5.4",
+    "version": "0.5.6",
     "factorio_version": "1.1",
     "title": "Lead",
     "author": "Brevven",
@@ -8,6 +8,7 @@
     "homepage": "",
     "dependencies": [
       "base >= 1.1.0",
+      "? bzsilicon",
       "? space-exploration",
       "? Krastorio2",
       "? Rich-Rocks-Requiem",
