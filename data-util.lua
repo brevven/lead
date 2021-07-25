@@ -1,4 +1,6 @@
--- WARNING - this file will be overwritten, edit bzlib/data-util.lua
+-- WARNING WARNING WARNING
+-- This file will be overwritten in mod zipfiles, edit bzlib/data-util.lua
+-- WARNING WARNING WARNING
 
 local me = require("me")
 local util = {}
