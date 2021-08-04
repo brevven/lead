@@ -36,7 +36,22 @@ util.add_ingredient("kr-laser-artillery-turret", "lead-plate", 10)
 util.add_ingredient("kr-railgun-turret", "lead-plate", 10)
 util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
 
+-- Space Exploration
 util.add_product("se-scrap-recycling", {name="lead-ore", amount=1, probability=0.1})
+util.replace_some_ingredient("se-pulveriser", "iron-plate", 10, "lead-plate", 10)
+util.replace_some_ingredient("se-canister", "copper-plate", 5, "lead-plate", 5)
+util.add_ingredient("industrial-furnace", "lead-plate", 16) -- AAII
+
+util.add_ingredient("se-material-testing-pack", "lead-plate", 1)
+util.add_ingredient("se-space-radiation-laboratory", "lead-plate", 100)
+util.add_ingredient("se-delivery-cannon", "lead-plate", 20)
+
+util.add_ingredient("se-experimental-alloys-data", "lead-plate", 1)
+util.add_to_product("se-experimental-alloys-data", "se-experimental-alloys-data", 1)
+util.add_to_product("se-experimental-alloys-data", "se-scrap", 1)
+util.add_to_ingredient("se-experimental-alloys-data", "se-empty-data", 1)
+
+
 
 if mods["WeaponPack"] then
   util.replace_ingredient("9x18", "iron-plate", "lead-plate")
