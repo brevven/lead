@@ -40,17 +40,19 @@ if mods["space-exploration"] then
       type = "recipe",
       name = "lead-smelting-vulcanite",
       category = "smelting",
+      subgroup = "plates",
       order = "d[lead-plate]",
-      energy_required = 48,
+      energy_required = 24,
       enabled = false,
       always_show_made_in = true,
       allow_as_intermediate = false,
       ingredients = {
-        {name = "lead-ore", amount = 20},
+        {name = "lead-ore", amount = 8},
         {name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.me.lead_plate, amount = 6},
+        {name = util.me.lead_plate, amount = 10},
+        {name = "copper-ore", amount=2},
       },
       icons =
       {

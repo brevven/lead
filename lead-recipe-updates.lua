@@ -44,7 +44,9 @@ util.add_ingredient("industrial-furnace", "lead-plate", 16) -- AAII
 
 util.add_ingredient("se-material-testing-pack", "lead-plate", 1)
 util.add_ingredient("se-space-radiation-laboratory", "lead-plate", 100)
-util.add_ingredient("se-delivery-cannon", "lead-plate", 20)
+util.add_ingredient("se-delivery-cannon", "lead-plate", 16)
+util.add_ingredient("se-meteor-point-defence", "lead-plate", 16)
+util.add_ingredient("se-meteor-defence", "lead-plate", 64)
 
 util.add_ingredient("se-experimental-alloys-data", "lead-plate", 1)
 util.add_to_product("se-experimental-alloys-data", "se-experimental-alloys-data", 1)
