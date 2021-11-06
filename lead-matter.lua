@@ -1,5 +1,6 @@
 -- Matter recipes for Krastorio2
 if mods["Krastorio2"] then
+local util = require("__bzlead__.data-util");
 local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
 
 data:extend(
@@ -10,7 +11,7 @@ data:extend(
     icons =
     {
       {
-        icon = "__Krastorio2__/graphics/technologies/matter-stone.png",
+        icon = util.k2assets().."/technologies/matter-stone.png",
         icon_size = 256,
       },
       {
