@@ -40,4 +40,7 @@ if mods["space-exploration"] then
   -- Organization
   data.raw.item["lead-plate"].subgroup = "plates"
   data.raw.recipe["lead-plate"].subgroup = "plates"
+
+  -- core mining balancing
+  util.add_to_product("se-core-fragment-omni", "lead-ore", -4)
 end

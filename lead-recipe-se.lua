@@ -4,6 +4,23 @@ local util = require("__bzlead__.data-util");
 if mods["space-exploration"] then
   se_delivery_cannon_recipes[util.me.lead_ore] = {name= util.me.lead_ore}
   se_delivery_cannon_recipes[util.me.lead_plate] = {name= util.me.lead_plate}
+
+  data:extend({
+  {
+    type = "recipe",
+    icons = {
+      { icon = "__base__/graphics/icons/landfill.png", icon_size = 64, icon_mipmaps = 3 },
+      { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, scale = 0.25},
+    },
+    name = "landfill-lead-ore",
+    category = "hard-recycling",
+    order = "z-b-lead",
+    subgroup = "terrain",
+    result = "landfill",
+    ingredients = {{"lead-ore", 50}},
+  }
+  })
+
   if mods["Krastorio2"] then
     data:extend({
     {
