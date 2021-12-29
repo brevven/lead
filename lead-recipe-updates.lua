@@ -112,7 +112,8 @@ util.add_ingredient("suppression-cannon-item-rampant-arsenal", "lead-plate", 30)
 util.add_ingredient("capsule-item-rampant-arsenal", "lead-plate", 10)
 util.add_ingredient("lite-artillery-turret-rampant-arsenal", "lead-plate", 20)
 
-
+-- Scraver's Atomic Artillery
+util.add_ingredient("sc-artillery-turret", "lead-plate", 40)
 -- Light artillery
 util.add_ingredient("derpy-artillery", "lead-plate", 20)
 -- Bigger artillery
