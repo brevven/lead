@@ -1,6 +1,6 @@
 {
     "name": "bzlead",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "factorio_version": "1.1",
     "title": "Lead",
     "author": "Brevven",
@@ -15,6 +15,6 @@
       "? deadlock-beltboxes-loaders",
       "? DeadlockCrating"
     ],
-    "description": "Adds lead ore and plates to the base game as an early game resource.\n\nLead is used in ammunition, pipes, batteries and a few other places.\n\nCompatible with Krastorio 2, Space Exploration and other mods. Further compatibility forthcoming."
+    "description": "Adds lead ore and plates to the base game as an early game resource.\n\nLead is used in ammunition, pipes, batteries and a few other places.\nCompatible with RSO, Krastorio 2, Space Exploration and other mods. Part of BZ Mods.\n\nWith graphics by snouz.",
 }
 
