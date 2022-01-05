@@ -13,4 +13,11 @@ data:extend({
 		default_value = "no",
     allowed_values = {"yes", "no"},
 	},
+  {
+		type = "string-setting",
+		name = "bzlead-more-ammo",
+		setting_type = "startup",
+		default_value = "no",
+    allowed_values = {"yes", "no"},
+	},
 })

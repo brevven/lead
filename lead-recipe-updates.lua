@@ -28,6 +28,12 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   util.replace_ingredient("shotgun-shell", "iron-plate", "lead-plate")
 end
 
+if util.me.more_ammo() then
+  util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-lead"})
+  util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-only"})
+  util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-copper-lead"})
+end
+
 -- Krastorio 2 changes
 util.add_ingredient("kr-laser-artillery-turret", "lead-plate", 10)
 util.add_ingredient("kr-railgun-turret", "lead-plate", 10)

@@ -135,3 +135,58 @@ data:extend({
   },
 })
 end
+
+if util.me.more_ammo() then
+data:extend({
+{
+  type = "recipe",
+  name = "firearm-magazine-iron-lead",
+  category = "crafting",
+  order = "a[basic-clips]-a[firearm-magazine]-i",
+  energy_required = data.raw.recipe["firearm-magazine"].energy_required * 2,
+  ingredients = {{"lead-plate", 4}, {"iron-plate", 5}},
+  result = "firearm-magazine",
+  result_count = 2,
+  enabled = false,
+  icons = {
+    { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -8}},
+    { icon = "__bzlead__/graphics/icons/lead-plate.png",
+      icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
+  },
+},
+{
+  type = "recipe",
+  name = "firearm-magazine-iron-only",
+  category = "crafting",
+  order = "a[basic-clips]-a[firearm-magazine]-io",
+  energy_required = data.raw.recipe["firearm-magazine"].energy_required,
+  ingredients = {{"iron-plate", 5}},
+  result = "firearm-magazine",
+  enabled = false,
+  icons = {
+    { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -8}},
+  },
+},
+{
+  type = "recipe",
+  name = "firearm-magazine-copper-lead",
+  category = "crafting",
+  order = "a[basic-clips]-a[firearm-magazine]-c",
+  energy_required = data.raw.recipe["firearm-magazine"].energy_required,
+  ingredients = {{"lead-plate", 3}, {"copper-plate", 1}},
+  result = "firearm-magazine",
+  enabled = false,
+  icons = {
+    { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -8}},
+    { icon = "__bzlead__/graphics/icons/lead-plate.png",
+      icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
+  },
+},
+})
+end
