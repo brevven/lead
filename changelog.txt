@@ -2,6 +2,7 @@
 Version: 0.6.1
 Date: 2022-01-01
   Changes:
+    - Remove sulfuric acid setting. Use Bypass recipes setting instead
     - More turret & artillery compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0

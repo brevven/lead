@@ -13,11 +13,4 @@ data:extend({
 		default_value = "no",
     allowed_values = {"yes", "no"},
 	},
-  { -- TODO remove this in 2022
-		type = "string-setting",
-		name = "bzlead-sulfuric",
-		setting_type = "startup",
-		default_value = "yes",
-    allowed_values = {"yes", "no"},
-	},
 })

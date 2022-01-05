@@ -9,9 +9,6 @@ function me.more_entities()
   return me.get_setting("bzlead-more-entities") == "yes"
 end
 
-function me.sulfuric()
-  return me.get_setting("bzlead-sulfuric") == "yes"
-end
 
 function me.get_setting(name)
   if settings.startup[name] == nil then
