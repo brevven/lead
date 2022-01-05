@@ -18,3 +18,4 @@ See changelog.txt
 - [TheoMarque](https://github.com/TheoMarque) (pl)
 - [Spectrus1702](https://github.com/Spectrus1702) (ru)
 - [Yokmp](https://github.com/Yokmp) (de)
+- [PlexPt](https://github.com/PlexPt) (zh\_CN)
