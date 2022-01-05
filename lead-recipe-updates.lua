@@ -113,7 +113,8 @@ util.add_ingredient("capsule-item-rampant-arsenal", "lead-plate", 10)
 util.add_ingredient("lite-artillery-turret-rampant-arsenal", "lead-plate", 20)
 
 -- Scraver's Atomic Artillery
-util.add_ingredient("sc-artillery-turret", "lead-plate", 40)
+util.add_ingredient("sc-atomic-artillery-turret", "lead-plate", 40)
+
 -- Light artillery
 util.add_ingredient("derpy-artillery", "lead-plate", 20)
 -- Bigger artillery
@@ -197,3 +198,10 @@ util.add_ingredient("Schall-cannon-H2-turret", "lead-plate", 64)
 
 -- Nuclear Reprocessing Rebalance
 util.replace_product("nuclear-fuel-reprocessing", "iron-plate", "lead-plate")
+
+-- Water turret
+util.add_ingredient("WT-water-turret", "lead-plate", 4)
+
+
+
+
