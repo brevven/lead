@@ -19,3 +19,4 @@ See changelog.txt
 - [Spectrus1702](https://github.com/Spectrus1702) (ru)
 - [Yokmp](https://github.com/Yokmp) (de)
 - [PlexPt](https://github.com/PlexPt) (zh\_CN)
+- [S3BA](https://github.com/S3BA-pl) (pl)
