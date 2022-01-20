@@ -211,5 +211,4 @@ util.replace_product("nuclear-fuel-reprocessing", "iron-plate", "lead-plate")
 util.add_ingredient("WT-water-turret", "lead-plate", 4)
 
 
-
-
+util.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
