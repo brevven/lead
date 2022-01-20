@@ -137,6 +137,111 @@ data:extend({
 end
 
 if util.me.more_ammo() then
+if mods.Krastorio2 and util.me.get_setting("kr-more-realistic-weapon") then
+data:extend({
+{
+  type = "recipe",
+  name = "firearm-magazine-iron-lead",
+  category = "crafting",
+  order = "a[basic-clips]-a01[pistol-magazine]-i",
+  energy_required = 1,
+  ingredients = {{"lead-plate", 2}, {"iron-plate", 3}},
+  result = "firearm-magazine",
+  result_count = 2,
+  enabled = false,
+  icons = {
+    { icon = util.k2assets().."/icons/items-with-variations/ammo/pistol-ammo-1.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -6}},
+    { icon = "__bzlead__/graphics/icons/lead-plate.png",
+      icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
+  },
+},
+{
+  type = "recipe",
+  name = "firearm-magazine-iron-only",
+  category = "crafting",
+  order = "a[basic-clips]-a01[pistol-magazine]-io",
+  energy_required = 0.5,
+  ingredients = {{"iron-plate", 3}},
+  result = "firearm-magazine",
+  enabled = false,
+  icons = {
+    { icon = util.k2assets().."/icons/items-with-variations/ammo/pistol-ammo-1.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -6}},
+  },
+},
+{
+  type = "recipe",
+  name = "firearm-magazine-copper-lead",
+  category = "crafting",
+  order = "a[basic-clips]-a01[pistol-magazine]-lc",
+  energy_required = 0.5,
+  ingredients = {{"lead-plate", 1}, {"copper-plate", 1}},
+  result = "firearm-magazine",
+  enabled = false,
+  icons = {
+    { icon = util.k2assets().."/icons/items-with-variations/ammo/pistol-ammo-1.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -6}},
+    { icon = "__bzlead__/graphics/icons/lead-plate.png",
+      icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
+  },
+},
+{
+  type = "recipe",
+  name = "rifle-magazine-iron-lead",
+  category = "crafting",
+  order = "a[basic-clips]-a03[rifle-magazine]-i",
+  energy_required = 2,
+  ingredients = {{"lead-plate", 2}, {"iron-plate", 3}, {"copper-plate", 2}},
+  result = "rifle-magazine",
+  result_count = 2,
+  enabled = false,
+  icons = {
+    { icon = util.k2assets().."/icons/items-with-variations/ammo/rifle-ammo-1.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -6}},
+    { icon = "__bzlead__/graphics/icons/lead-plate.png",
+      icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
+  },
+},
+{
+  type = "recipe",
+  name = "rifle-magazine-iron",
+  category = "crafting",
+  order = "a[basic-clips]-a03[rifle-magazine]-io",
+  energy_required = 1,
+  ingredients = {{"iron-plate", 4}, {"copper-plate", 1}},
+  result = "rifle-magazine",
+  enabled = false,
+  icons = {
+    { icon = util.k2assets().."/icons/items-with-variations/ammo/rifle-ammo-1.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -6}},
+  },
+},
+{
+  type = "recipe",
+  name = "rifle-magazine-copper-lead",
+  category = "crafting",
+  order = "a[basic-clips]-a03[rifle-magazine]-lc",
+  energy_required = 1,
+  ingredients = {{"lead-plate", 3}, {"copper-plate", 1}},
+  result = "rifle-magazine",
+  enabled = false,
+  icons = {
+    { icon = util.k2assets().."/icons/items-with-variations/ammo/rifle-ammo-1.png", icon_size = 64},
+    { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64,
+      scale=0.25, shift= {8, -6}},
+    { icon = "__bzlead__/graphics/icons/lead-plate.png",
+      icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -6}},
+  },
+},
+})
+
+else
 data:extend({
 {
   type = "recipe",
@@ -189,4 +294,5 @@ data:extend({
   },
 },
 })
+end
 end
