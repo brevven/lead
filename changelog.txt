@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.6
-Date: 2022-01-15
+Version: 1.0.0
+Date: 2022-01-20
   Changes:
+    - We're calling this 1.0.0
+    - MadClown's vanilla nuclear compatibility
     - Japanese (ja) locale updates thanks to sakuro
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.5

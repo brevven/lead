@@ -1,5 +1,5 @@
 -- Enriched Lead for Krastorio2
-local util = require("__bzlead__.data-util");
+local util = require("data-util");
 
 if mods["Krastorio2"] then
 data:extend(

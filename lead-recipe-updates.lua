@@ -210,5 +210,5 @@ util.replace_product("nuclear-fuel-reprocessing", "iron-plate", "lead-plate")
 -- Water turret
 util.add_ingredient("WT-water-turret", "lead-plate", 4)
 
-
-util.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
+-- MadClown's Nuclear
+util.replace_ingredient("mixed-oxide", "iron-plate", "lead-plate")
