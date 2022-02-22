@@ -70,7 +70,7 @@ end
 function util.remove_prerequisite(technology_name, prerequisite)
   local technology = data.raw.technology[technology_name]
   local index = -1
-  if technology and data.raw.technology[prerequisite] then
+  if technology then
     for i, prereq in pairs(technology.prerequisites) do
       if prereq == prerequisite then
         index = i
@@ -558,7 +558,7 @@ function util.add_crafting_category(entity_type, entity, category)
    if data.raw[entity_type][entity] then
       for i, existing in pairs(data.raw[entity_type][entity].crafting_categories) do
         if existing == category then
-          log(entity.." not adding "..new.." -- duplicate")
+          log(entity.." not adding "..category.." -- duplicate")
           return
         end
       end

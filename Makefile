@@ -6,7 +6,7 @@
 # install` from dev/<modname> to install the mod as a zip file. That zip file
 # should also be ready to upload to the mod portal
 
-.PHONY: copy lint-changelog install
+.PHONY: copy lint-changelog install zorro
 
 libdir = "../bzlib"
 libfiles = $(shell ls $(libdir)/*.lua | grep -o '[^/]*.lua')
