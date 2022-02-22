@@ -177,6 +177,31 @@ function add_ingredient(recipe, ingredient, quantity)
   end
 end
 
+-- Add a given ingredient prototype to a given recipe
+function util.add_ingredient_raw(recipe_name, ingredient)
+  if me.bypass[recipe_name] then return end
+  if data.raw.recipe[recipe_name] and (data.raw.item[ingredient.name] or data.raw.item[ingredient[1]]) then
+    me.add_modified(recipe_name)
+    add_ingredient_raw(data.raw.recipe[recipe_name], ingredient)
+    add_ingredient_raw(data.raw.recipe[recipe_name].normal, ingredient)
+    add_ingredient_raw(data.raw.recipe[recipe_name].expensive, ingredient)
+  end
+end
+
+function add_ingredient_raw(recipe, ingredient)
+  if recipe ~= nil and recipe.ingredients ~= nil then
+    for i, existing in pairs(recipe.ingredients) do
+      if (
+          (existing[1] and (existing[1] == ingredient[1] or existing[1] == ingredient.name)) or 
+          (existing.name and (existing.name == ingredient[1] or existing.name == ingredient.name))
+      ) then
+        return
+      end
+    end
+    table.insert(recipe.ingredients, ingredient)
+  end
+end
+
 -- Set an ingredient to a given quantity
 function util.set_ingredient(recipe_name, ingredient, quantity)
   if me.bypass[recipe_name] then return end
@@ -511,6 +536,15 @@ function util.set_icons(recipe_name, icons)
     data.raw.recipe[recipe_name].icons = icons
     data.raw.recipe[recipe_name].icon = nil
     data.raw.recipe[recipe_name].icon_size = nil
+  end
+end
+
+-- Set recipe icons
+function util.set_item_icons(item_name, icons)
+  if data.raw.recipe[item_name] then
+    data.raw.recipe[item_name].icons = icons
+    data.raw.recipe[item_name].icon = nil
+    data.raw.recipe[item_name].icon_size = nil
   end
 end
 
