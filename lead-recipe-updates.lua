@@ -14,6 +14,7 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   util.replace_some_ingredient("gun-turret", "iron-plate", 4, "lead-plate", 4)
 
   util.add_ingredient("big-electric-pole", "lead-plate", 2)
+  util.add_ingredient("large-electric-pole", "lead-plate", 2) --modded
   util.add_ingredient("substation", "lead-plate", 2)
   util.add_ingredient("electric-furnace", "lead-plate", 4)
   if not (mods.bzsilicon and util.has_ingredient("solar-panel", "solar-cell")) then
