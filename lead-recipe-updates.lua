@@ -212,3 +212,14 @@ util.add_ingredient("WT-water-turret", "lead-plate", 4)
 
 -- MadClown's Nuclear
 util.replace_ingredient("mixed-oxide", "iron-plate", "lead-plate")
+
+
+-- Angel's storage, AAI, Warehousing, etc.
+util.replace_some_ingredient("angels-pressure-tank-1", "steel-plate", 10, "lead-plate", 20)
+util.add_ingredient("angels-warehouse", "lead-plate", 20)
+util.add_ingredient("silo", "lead-plate", 8)
+util.add_ingredient("aai-warehouse", "lead-plate", 20)
+util.add_ingredient("aai-storehouse", "lead-plate", 8)
+util.add_ingredient("warehouse-basic", "lead-plate", 20)
+util.add_ingredient("storehouse-basic", "lead-plate", 8)
+
