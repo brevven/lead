@@ -54,6 +54,19 @@ function util.contains(table, sought)
   return false
 end
 
+-- Set/override a technology's prerequisites
+function util.set_prerequisite(technology_name, prerequisites)
+  local technology = data.raw.technology[technology_name]
+  if technology then
+    technology.prerequisites = {}
+    for i, prerequisite in pairs(prerequisites) do
+      if data.raw.technology[prerequisite] then
+        table.insert(technology.prerequisites, prerequisite)
+      end
+    end
+  end
+end
+
 -- Add a prerequisite to a given technology
 function util.add_prerequisite(technology_name, prerequisite)
   local technology = data.raw.technology[technology_name]
@@ -541,10 +554,10 @@ end
 
 -- Set recipe icons
 function util.set_item_icons(item_name, icons)
-  if data.raw.recipe[item_name] then
-    data.raw.recipe[item_name].icons = icons
-    data.raw.recipe[item_name].icon = nil
-    data.raw.recipe[item_name].icon_size = nil
+  if data.raw.item[item_name] then
+    data.raw.item[item_name].icons = icons
+    data.raw.item[item_name].icon = nil
+    data.raw.item[item_name].icon_size = nil
   end
 end
 
