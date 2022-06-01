@@ -107,7 +107,7 @@ data:extend(
 		{
 			{type = "fluid", name = "water", amount = 90, catalyst_amount = 90},
 			{type = "item",  name = "stone", probability = 0.30, amount = 1},
-			{type = "item",  name = "lead-ore", probability = 0.20, amount_min = 1, amount_max = 4},
+			{type = "item",  name = "lead-ore", probability = 0.50, amount = 1},
 			{type = "item",  name = "copper-ore", probability = 0.05, amount = 1},
 		},
 		crafting_machine_tint =
