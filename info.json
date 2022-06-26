@@ -1,6 +1,6 @@
 {
     "name": "bzlead",
-    "version": "1.0.5",
+    "version": "1.1.0",
     "factorio_version": "1.1",
     "title": "Lead",
     "author": "Brevven",
@@ -12,6 +12,7 @@
       "? space-exploration",
       "? Krastorio2",
       "? Rich-Rocks-Requiem",
+      "? 248k",
       "? deadlock-beltboxes-loaders",
       "? DeadlockCrating"
     ],
