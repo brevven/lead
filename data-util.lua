@@ -457,14 +457,19 @@ function util.replace_product(recipe_name, old, new)
 end
 
 function replace_product(recipe, old, new)
-  if recipe ~= nil and recipe.results ~= nil then
+  if recipe then
+    if recipe.main_product == old then
+      recipe.main_product = new
+    end
     if recipe.result == old then
-      recipe.results = new
+      recipe.result = new
       return
     end
-    for i, result in pairs(recipe.results) do
-			if result.name == old then result.name = new end
-			if result[1] == old then result[1] = new end
+    if recipe.results then
+      for i, result in pairs(recipe.results) do
+        if result.name == old then result.name = new end
+        if result[1] == old then result[1] = new end
+      end
     end
   end
 end
