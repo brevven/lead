@@ -58,6 +58,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     type = "recipe",
     category = "smelting",
     name = "molten-lead",
+    main_product = "molten-lead",
     subgroup = "lead",
     results = {
       {type = "fluid", name = "molten-lead", amount = mods.Krastorio2 and 750 or 900},
