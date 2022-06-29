@@ -5,6 +5,9 @@ if deadlock then
   if mods["Krastorio2"] then
     deadlock.add_stack("enriched-lead", "__bzlead__/graphics/icons/stacked/enriched-lead-stacked.png" , "deadlock-stacking-1", 64)
   end
+  if data.raw.item["lead-ingot"] then
+    deadlock_crating.add_stack("lead-ingot", nil, "deadlock-stacking-1", nil)
+  end
 end
 
 -- Deadlock crating recipes
@@ -13,6 +16,9 @@ if deadlock_crating then
   deadlock_crating.add_crate("lead-plate", "deadlock-crating-1")
   if mods["Krastorio2"] then
     deadlock_crating.add_crate("enriched-lead", "deadlock-crating-1")
+  end
+  if data.raw.item["lead-ingot"] then
+    deadlock_crating.add_crate("lead-ingot", "deadlock-crating-1")
   end
 end
 
