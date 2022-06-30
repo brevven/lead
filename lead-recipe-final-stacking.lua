@@ -6,7 +6,7 @@ if deadlock then
     deadlock.add_stack("enriched-lead", "__bzlead__/graphics/icons/stacked/enriched-lead-stacked.png" , "deadlock-stacking-1", 64)
   end
   if data.raw.item["lead-ingot"] then
-    deadlock_crating.add_stack("lead-ingot", nil, "deadlock-stacking-1", nil)
+    deadlock.add_stack("lead-ingot", nil, "deadlock-stacking-1", nil)
   end
 end
 
