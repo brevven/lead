@@ -7,8 +7,8 @@ data:extend({
   {
     type = "recipe",
     name = util.me.lead_plate,
+    main_product = util.me.lead_plate,
     category = "smelting",
-    subgroup = "raw-material",
     order = "d[lead-plate]",
     icons = (mods["Krastorio2"] and
         {
