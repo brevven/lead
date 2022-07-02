@@ -1,3 +1,4 @@
+local util = require("data-util");
 
 if simpleCompress then
   if simpleCompress.ores then
@@ -21,10 +22,13 @@ if simpleCompress then
       SimpleCompress_AddSmeltingRecipe("lead-ore", "lead-plate")
       SimpleCompress_UnlockOreSmeltingTech("lead-ore")
       local leadRecipe = data.raw.recipe["smelt-compressed-lead-ore"]
-      leadRecipe.results = {
-        {type="item", name = "lead-plate", amount=5/6*simpleCompress.CompressedSmeltAmount},
-        {type="item", name = "copper-ore", amount=1/6*simpleCompress.CompressedSmeltAmount},
-      }
+      leadRecipe.results = 
+          util.me.byproduct() and {
+            {type="item", name = "lead-plate", amount=5/6*simpleCompress.CompressedSmeltAmount},
+            {type="item", name = "copper-ore", amount=1/6*simpleCompress.CompressedSmeltAmount},
+          } or {
+            {type="item", name = "lead-plate", amount=simpleCompress.CompressedSmeltAmount},
+          }
       leadRecipe.icons = {{ icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64 }}
       leadRecipe.subgroup = "raw-material"
       leadRecipe.order = "d[lead-plate]"

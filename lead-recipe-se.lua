@@ -118,7 +118,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     data.raw.recipe["enriched-lead-plate"].order= "d[lead-plate]"
     se_delivery_cannon_recipes["enriched-lead"] = {name= "enriched-lead"}
   else
-    util.add_product("molten-lead", {"copper-ore", 6})
+    if util.me.byproduct() then util.add_product("molten-lead", {"copper-ore", 6}) end
   end
 else
   data.raw.item["lead-plate"].subgroup = "plates"
@@ -169,8 +169,7 @@ else
         {name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.me.lead_plate, amount = 10},
-        {name = "copper-ore", amount=2},
+        {name = util.me.lead_plate, amount = util.me.byproduct() and 10 or 12},
       },
       icons =
       {
@@ -181,6 +180,7 @@ else
       
     },
     })
+    if util.me.byproduct() then util.add_product("lead-smelting-vulcanite", {"copper-ore", 2}) end
     table.insert(data.raw.technology["se-processing-vulcanite"].effects, 
         {type = "unlock-recipe", recipe= "lead-smelting-vulcanite"})
   end

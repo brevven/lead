@@ -4,6 +4,9 @@ me.name = "bzlead"
 me.lead_ore = "lead-ore"
 me.lead_plate = "lead-plate"
 
+function me.byproduct()
+  return me.get_setting("bzlead-byproduct")
+end
 
 function me.more_entities()
   return me.get_setting("bzlead-more-entities") == "yes"

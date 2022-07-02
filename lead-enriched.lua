@@ -40,9 +40,9 @@ data:extend(
     },
     results =
     { 
-      {type = "item",  name = "enriched-lead", amount = 5},
-      {type = "item",  name = "copper-ore", amount = 2},
-      {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
+      {type = "item",  name = "enriched-lead", amount = util.me.byproduct() and 5 or 6},
+      {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25},
+      util.me.byproduct() and {type = "item",  name = "copper-ore", amount = 2} or nil,
     },
     crafting_machine_tint =
     {
@@ -108,7 +108,7 @@ data:extend(
 			{type = "fluid", name = "water", amount = 90, catalyst_amount = 90},
 			{type = "item",  name = "stone", probability = 0.30, amount = 1},
 			{type = "item",  name = "lead-ore", probability = 0.50, amount = 1},
-			{type = "item",  name = "copper-ore", probability = 0.05, amount = 1},
+			util.me.byproduct() and {type = "item",  name = "copper-ore", probability = 0.05, amount = 1} or nil,
 		},
 		crafting_machine_tint =
 		{

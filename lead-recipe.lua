@@ -23,29 +23,35 @@ data:extend({
           enabled = true,
           energy_required = 16,
           ingredients = {{"lead-ore", 10}},
-          results = {
+          results = util.me.byproduct() and {
             {type="item", name = util.me.lead_plate, amount_min=4, amount_max=5},
             {type="item", name = "copper-ore", amount_min=1, amount_max=2},
-          }
+          } or {
+            {type="item", name = util.me.lead_plate, amount=5},
+          },
         } or
         {
           enabled = true,
           energy_required = 6.4,
           ingredients = {{"lead-ore", 2}},
-          results = {
+          results = util.me.byproduct() and {
             {type="item", name = util.me.lead_plate, amount=2, probability=5/6},
             {type="item", name = "copper-ore", amount=1, probability=1/3},
-          }
+          } or {
+            {type="item", name = util.me.lead_plate, amount=2},
+          },
         }),
     expensive =
     {
       enabled = true,
       energy_required = 12.8,
       ingredients = {{"lead-ore", 4}},
-      results = {
+      results = util.me.byproduct() and {
         {type="item", name = util.me.lead_plate, amount=2, probability=5/6},
-        {type="item", name = "copper-ore", amount=2, probability=1/3},
-      }
+        {type="item", name = "copper-ore", amount=1, probability=1/3},
+      } or {
+        {type="item", name = util.me.lead_plate, amount=2},
+      },
     }
   },
   {
