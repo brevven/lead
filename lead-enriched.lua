@@ -23,6 +23,7 @@ data:extend(
   {
     type = "recipe",
     name = "enriched-lead",
+    main_product = "enriched-lead",
     icon = "__bzlead__/graphics/icons/enriched-lead.png",
     icon_size = 64,
     icon_mipmaps = 3,
@@ -51,7 +52,6 @@ data:extend(
       tertiary = {r = 0.690, g = 0.768, b = 0.870, a = 0.000}, 
       quaternary = {r = 0.0, g = 0.980, b = 0.603, a = 0.900}
     },
-    subgroup = "raw-material",
     order = "e03[enriched-lead]"
   },
   {

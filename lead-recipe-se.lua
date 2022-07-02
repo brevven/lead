@@ -30,7 +30,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     order = "a-h-z-a",
   }
   })
-  data.raw.item["lead-plate"].subgroup = "lead"
+  util.set_item_subgroup("lead-plate", "lead")
   data:extend({
   {
     type = "item",
@@ -115,6 +115,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "lead-ingot"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "lead-ingot-to-plate"})
   if mods["Krastorio2"] then
+    util.set_item_subgroup("enriched-lead", "lead")
     data.raw.recipe["enriched-lead-plate"].order= "d[lead-plate]"
     se_delivery_cannon_recipes["enriched-lead"] = {name= "enriched-lead"}
   else
