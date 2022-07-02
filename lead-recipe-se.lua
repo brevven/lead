@@ -78,7 +78,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     name = "lead-ingot",
     category = "casting",
     results = {{"lead-ingot", 1}},
-    energy_required = 100,
+    energy_required = 25,
     ingredients = {
       {type = "fluid", name = "molten-lead", amount = 250},
     },
