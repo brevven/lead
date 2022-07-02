@@ -93,7 +93,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
 
     icons = {
       {icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3},
-      {icon = "__bzlead__/graphics/icons/lead-ingot.png", icon_size = 128, scale = 0.25, shift = {-8, -8}},
+      {icon = "__bzlead__/graphics/icons/lead-ingot.png", icon_size = 128, scale = 0.125, shift = {-8, -8}},
     },
     results = {
       {name = "lead-plate", amount = 10},
