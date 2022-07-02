@@ -7,7 +7,6 @@ data:extend({
   {
     type = "recipe",
     name = util.me.lead_plate,
-    main_product = util.me.lead_plate,
     category = "smelting",
     order = "d[lead-plate]",
     icons = (mods["Krastorio2"] and
@@ -20,6 +19,7 @@ data:extend({
 ),
     normal = (mods["Krastorio2"] and
         {
+          main_product = util.me.lead_plate,
           enabled = true,
           energy_required = 16,
           ingredients = {{"lead-ore", 10}},
@@ -31,6 +31,7 @@ data:extend({
           },
         } or
         {
+          main_product = util.me.lead_plate,
           enabled = true,
           energy_required = 6.4,
           ingredients = {{"lead-ore", 2}},
@@ -43,6 +44,7 @@ data:extend({
         }),
     expensive =
     {
+      main_product = util.me.lead_plate,
       enabled = true,
       energy_required = 12.8,
       ingredients = {{"lead-ore", 4}},
@@ -93,6 +95,8 @@ data:extend({
   } or nil,
 })
 end
+log("BZZZZZZ")
+log(serpent.dump(data.raw.recipe["lead-plate"]))
 
 if mods["IndustrialRevolution"] then
 data:extend({
