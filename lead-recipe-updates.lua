@@ -229,3 +229,9 @@ util.add_ingredient("aai-storehouse", "lead-plate", 8)
 util.add_ingredient("warehouse-basic", "lead-plate", 20)
 util.add_ingredient("storehouse-basic", "lead-plate", 8)
 
+-- Leighzer's scrap
+if mods.leighzerscrapyards then
+  util.add_to_product("scrap-processing", "iron-plate", -1)
+  util.add_product("scrap-processing", {"lead-plate", 1})
+end
+

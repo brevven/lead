@@ -1,3 +1,9 @@
+Version: 1.2.9
+Date: 2022-07-10
+  Changes:
+    - Leighzer's scrap compatibility
+    - ru l10n updates thanks to Pergamum663
+---------------------------------------------------------------------------------------------------
 Version: 1.2.8
 Date: 2022-07-09
   Changes:
