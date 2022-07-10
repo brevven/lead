@@ -1,6 +1,14 @@
+Version: 1.2.8
+Date: 2022-07-09
+  Changes:
+    - Atomic Overhaul compatibility
+---------------------------------------------------------------------------------------------------
 Version: 1.2.7
-Date: 
+Date: 2022-07-09
+  Changes:
     - Japanese (ja) locale updates thanks to sakuro
+    - Space Exploration: efficiency module uses battery instead of copper cable. This gets lead
+      A little more involved in science production. (Use bypass recipes setting if needed)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.6
 Date: 2022-07-03

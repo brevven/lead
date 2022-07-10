@@ -46,6 +46,9 @@ util.add_ingredient("kr-railgun-turret", "lead-plate", 10)
 util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
 
 -- Space Exploration
+if mods["space-exploration"] then
+  util.replace_ingredient("effectivity-module", "copper-cable", "battery", 5)
+end
 util.add_product("se-scrap-recycling", {name="lead-ore", amount=1, probability=0.1})
 util.replace_some_ingredient("se-pulveriser", "iron-plate", 10, "lead-plate", 10)
 util.replace_some_ingredient("se-canister", "copper-plate", 5, "lead-plate", 5)
@@ -137,7 +140,6 @@ util.replace_some_ingredient("bolt100mk1", "steel-plate", 3, "lead-plate", 3)
 util.replace_some_ingredient("bolt75metalstorm", "steel-plate", 3, "lead-plate", 2)
 util.replace_some_ingredient("bolt100metalstorm", "steel-plate", 5, "lead-plate", 5)
 
-
 -- Geothermal
 util.add_ingredient("geothermal-well", "lead-plate", 120)
 
@@ -147,6 +149,9 @@ util.add_ingredient("nuclear-furnace-2", "lead-plate", 200)
 
 -- Mega furnace
 util.add_ingredient("mega-furnace", "lead-plate", 4)
+
+-- Atomic Overhaul
+util.replace_ingredient("empty-fuel-cell-recipe", "plastic-bar", "lead-plate")
 
 -- Nuclear fuel, Plutonium energy
 util.replace_ingredient("breeder-fuel-cell", "iron-plate", "lead-plate")
