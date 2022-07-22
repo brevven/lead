@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
-Date: 2022-07-11
-  Features
+Date: 2022-07-22
+  Features:
     - cs (Czech) locale updates thanks to RiCZrd
   Fixes:
     - Fix in-game changelog

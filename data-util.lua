@@ -111,11 +111,16 @@ function util.add_effect(technology_name, effect)
   end
 end
 
+-- Add an effect to a given technology to unlock recipe
+function util.add_unlock(technology_name, recipe)
+  util.add_effect(technology_name, {type="unlock-recipe", recipe=recipe})
+end
+
 -- remove recipe unlock effect from a given technology
 function util.remove_recipe_effect(technology_name, recipe_name)
   local technology = data.raw.technology[technology_name]
   local index = -1
-  if technology then
+  if technology and technology.effects then
     for i, effect in pairs(technology.effects) do
       if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
         index = i
@@ -141,6 +146,14 @@ function util.set_enabled(recipe_name, enabled)
     if data.raw.recipe[recipe_name].normal then data.raw.recipe[recipe_name].normal.enabled = enabled end
     if data.raw.recipe[recipe_name].expensive then data.raw.recipe[recipe_name].expensive.enabled = enabled end
     if not data.raw.recipe[recipe_name].normal then data.raw.recipe[recipe_name].enabled = enabled end
+  end
+end
+
+function util.set_hidden(recipe_name)
+  if data.raw.recipe[recipe_name] then
+    if data.raw.recipe[recipe_name].normal then data.raw.recipe[recipe_name].normal.hidden = true end
+    if data.raw.recipe[recipe_name].expensive then data.raw.recipe[recipe_name].expensive.hidden = true end
+    if not data.raw.recipe[recipe_name].normal then data.raw.recipe[recipe_name].hidden = true end
   end
 end
 
