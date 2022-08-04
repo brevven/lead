@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 2022-07-22
-  Features:
+  Localization:
     - cs (Czech) locale updates thanks to RiCZrd
   Fixes:
     - Fix in-game changelog
@@ -10,6 +10,7 @@ Version: 1.2.9
 Date: 2022-07-10
   Changes:
     - Leighzer's scrap compatibility
+  Localization:
     - ru l10n updates thanks to Pergamum663
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.8
@@ -19,8 +20,9 @@ Date: 2022-07-09
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.7
 Date: 2022-07-09
-  Changes:
+  Localization:
     - Japanese (ja) locale updates thanks to sakuro
+  Changes:
     - Space Exploration: efficiency module uses battery instead of copper cable. This gets lead
       A little more involved in science production. (Use bypass recipes setting if needed)
 ---------------------------------------------------------------------------------------------------
@@ -86,7 +88,7 @@ Date: 2022-02-25
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2022-02-22
-  Changes:
+  Localization:
     - Korean (ko) l10n thanks to x2605
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
@@ -101,6 +103,7 @@ Date: 2022-01-20
   Changes:
     - We're calling this 1.0.0
     - MadClown's vanilla nuclear compatibility
+  Localization:
     - Japanese (ja) locale updates thanks to sakuro
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.5
@@ -110,12 +113,12 @@ Date: 2022-01-10
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 2022-01-06
-  Changes:
+  Localization:
     - Polish (pl) l10n updates, thanks to S3BA
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 2022-01-05
-  Changes:
+  Localization:
     - Simplified Chinese (zh_CN) l10n, thanks to PlexPt
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
@@ -183,15 +186,16 @@ Date: 2021-06-29
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 2021-06-26
-  Features:
+  Localization:
     - ja locale updates thanks to Sakuro
+  Features:
     - Plutonium Energy compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 2021-06-16
   Features:
     - Recipe bypass setting
-  Changes:
+  Localization:
     - Tweak to pl l10n, thanks to TheoMarque
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.11
@@ -210,6 +214,7 @@ Version: 0.4.9
 Date: 2021-06-05
   Changes:
     - More very minor recipe tweaks
+  Localization:
     - More l10n (sakuro)
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.8
@@ -243,7 +248,7 @@ Version: 0.4.3
 Date: 2021-05-21
   Features:
     - Add option for lead in sulfuric acid introduced on 0.4.0. To be removed in 2022
-  Changes:
+  Localization:
     - Minor pl l10n per TheoMarque
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
@@ -268,22 +273,22 @@ Date: 2021-05-05
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.13
 Date: 2021-04-30
-  Features:
+  Localization:
     - German localization, thanks to user yokmp
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.12
 Date: 2021-04-28
-  Features:
+  Localization:
     - Russian localization, thanks to user Spectrus1702
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.11
 Date: 2021-04-19
-  Features:
+  Localization:
     - Polish localization, thanks to user TheoMarque
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.10
 Date: 2021-04-15
-  Fixes:
+  Localization:
     - Japanese l10n fixes, thanks to user sakuro
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.9
@@ -293,7 +298,7 @@ Date: 2021-04-13
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.8
 Date: 2021-04-11
-  Features:
+  Localization:
     - Japanese localization, thanks to user sakuro
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.7
