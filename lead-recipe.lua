@@ -95,8 +95,6 @@ data:extend({
   } or nil,
 })
 end
-log("BZZZZZZ")
-log(serpent.dump(data.raw.recipe["lead-plate"]))
 
 if mods["IndustrialRevolution"] then
 data:extend({

@@ -22,6 +22,7 @@ if mods["space-exploration"] then
   })
 
 if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
+  util.se_matter({ore="lead-ore", energy_required=1, quant_out=10, stream_out=60})
   data:extend({
   {
     type = "item-subgroup",

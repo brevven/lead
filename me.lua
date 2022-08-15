@@ -5,7 +5,7 @@ me.lead_ore = "lead-ore"
 me.lead_plate = "lead-plate"
 
 function me.byproduct()
-  return me.get_setting("bzlead-byproduct")
+  return me.get_setting("bzlead-byproduct") and not me.get_setting("bz-no-byproduct")
 end
 
 function me.more_entities()
