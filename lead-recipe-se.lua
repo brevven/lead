@@ -4,22 +4,7 @@ local util = require("data-util");
 if mods["space-exploration"] then
   se_delivery_cannon_recipes[util.me.lead_ore] = {name= util.me.lead_ore}
   se_delivery_cannon_recipes[util.me.lead_plate] = {name= util.me.lead_plate}
-
-  data:extend({
-  {
-    type = "recipe",
-    icons = {
-      { icon = "__base__/graphics/icons/landfill.png", icon_size = 64, icon_mipmaps = 3 },
-      { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, scale = 0.25},
-    },
-    name = "landfill-lead-ore",
-    category = "hard-recycling",
-    order = "z-b-lead",
-    subgroup = "terrain",
-    result = "landfill",
-    ingredients = {{"lead-ore", 50}},
-  }
-  })
+  util.se_landfill({ore="lead-ore"})
 
 if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.se_matter({ore="lead-ore", energy_required=1, quant_out=10, stream_out=60})
