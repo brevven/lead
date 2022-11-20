@@ -1,8 +1,8 @@
-require("lead-recipe-final-stacking")
 require("lead-recipe-modules")
 require("lead-recipe-colors")
 require("lead-recipe-final-5d")
 require("lead-recipe-final-rrr")
+require("lead-recipe-final-stacking")
 
 
 ----
