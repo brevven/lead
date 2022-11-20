@@ -161,6 +161,12 @@ util.replace_ingredient("MOX-fuel", "iron-plate", "lead-plate")
 -- True Nukes
 util.replace_ingredient("tritium-breeder-fuel-cell", "iron-plate", "lead-plate")
 
+-- Shivero's nuclear
+util.replace_ingredient("shiveros_thorium_fuel_cell", "iron-plate", "lead-plate")
+util.replace_ingredient("shiveros_plutonium_fuel_cell", "iron-plate", "lead-plate")
+util.replace_ingredient("shiveros_uranium-233_fuel_cell", "iron-plate", "lead-plate")
+util.replace_ingredient("shiveros_uranium-234_fuel_cell", "iron-plate", "lead-plate")
+
 -- Hazmat suit
 util.add_ingredient("hazmat-suit", "lead-plate", 2)
 util.add_ingredient("mil-grade-fuel-cell", "lead-plate", 10)
