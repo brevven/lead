@@ -3,6 +3,8 @@ Version: 1.2.16
 Date: 2022-12-24
   Localization:
     - zh-CN by sunnytan53
+  Changes:
+    - SE ingot in delivery cannon
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: 2022-10-30

@@ -107,6 +107,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   else
     if util.me.byproduct() then util.add_product("molten-lead", {"copper-ore", 6}) end
   end
+  se_delivery_cannon_recipes["lead-ingot"] = {name="lead-ingot"}
 else
   data.raw.item["lead-plate"].subgroup = "plates"
   if mods["Krastorio2"] then
