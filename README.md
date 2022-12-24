@@ -23,3 +23,4 @@ See changelog.txt
 - [x2605](https://github.com/x2605) (ko)
 - [Pergamum663](https://github.com/Pergamum663) (ru)
 - [RiCZrd](https://mods.factorio.com/user/RiCZrd) (cs)
+- [sunnytan53](https://github.com/sunnytan53) (zh\_CN)
