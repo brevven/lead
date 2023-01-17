@@ -3,6 +3,7 @@ local me = {}
 me.name = "bzlead"
 me.lead_ore = "lead-ore"
 me.lead_plate = "lead-plate"
+me.recipes = {me.lead_plate, "enriched-lead-plate", "enriched-lead", "lead-smelting-vulcanite", "molten-lead", "enriched-lead-smelting-vulcanite"}
 
 function me.byproduct()
   return me.get_setting("bzlead-byproduct") and not me.get_setting("bz-no-byproduct")

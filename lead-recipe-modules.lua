@@ -1,19 +1,7 @@
+local util = require("data-util");
 -- Enable prod modules for all lead plate and ore recipes
 
-recipes = {"lead-plate"}
-if mods["Krastorio2"] then
-  table.insert(recipes, "enriched-lead-plate")
-  table.insert(recipes, "enriched-lead")
-end
-if mods["space-exploration"] then
-  table.insert(recipes, "lead-smelting-vulcanite")
-  table.insert(recipes, "molten-lead")
-  if mods["Krastorio2"] then
-    table.insert(recipes, "enriched-lead-smelting-vulcanite")
-  end
-end
-
-for i, recipe in pairs(recipes) do
+for i, recipe in pairs(util.me.recipes) do
   if data.raw.recipe[recipe] then
     for j, module in pairs(data.raw.module) do
       if module.effect then
