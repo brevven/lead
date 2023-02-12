@@ -13,6 +13,10 @@ See changelog.txt
 - [brevven](https://mods.factorio.com/user/brevven) (code, design, graphics)
 - [snouz](https://github.com/snouz) (graphics)
 
+### Compatibility
+- [nihilistzsche](https://github.com/nihilistzsche)
+
+
 ### Localization
 - [Sakuro](https://github.com/sakuro) (ja)
 - [TheoMarque](https://github.com/TheoMarque) (pl)
