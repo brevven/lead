@@ -49,7 +49,7 @@ util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
 if mods["space-exploration"] then
   util.replace_ingredient("effectivity-module", "copper-cable", "battery", 5)
 end
-util.add_product("se-scrap-recycling", {name="lead-ore", amount=1, probability=0.1})
+util.add_product("se-scrap-recycling", {name="lead-ore", type="item", amount=1, probability=0.1})
 util.replace_some_ingredient("se-pulveriser", "iron-plate", 10, "lead-plate", 10)
 util.replace_some_ingredient("se-canister", "copper-plate", 5, "lead-plate", 5)
 util.add_ingredient("industrial-furnace", "lead-plate", 16) -- AAII
