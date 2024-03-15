@@ -13,8 +13,9 @@ See changelog.txt
 - [brevven](https://mods.factorio.com/user/brevven) (code, design, graphics)
 - [snouz](https://github.com/snouz) (graphics)
 
-### Compatibility
+### Compatibility & bug fixes
 - [nihilistzsche](https://github.com/nihilistzsche)
+- [orangedude27](https://github.com/orangedude27)
 
 
 ### Localization
