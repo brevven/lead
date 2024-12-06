@@ -1,5 +1,4 @@
 local resource_autoplace = require('resource-autoplace');
-local noise = require('noise');
 
 local util = require("__bzlead__.data-util");
 
@@ -11,13 +10,14 @@ data:extend({
     richness = true,
     order = "b-e"
 	},
-	{
-    type = "noise-layer",
-    name = "lead-ore"
-	},
+-- Noise not work 2.0
+--	{
+--   type = "noise-layer",
+--    name = "lead-ore"
+--	},
 	{
     type = "resource",
-    icon_size = 64, icon_mipmaps = 3,
+    icon_size = 64,
     name = "lead-ore",
     icon = "__bzlead__/graphics/icons/lead-ore.png",
     flags = {"placeable-neutral"},
@@ -68,7 +68,7 @@ data:extend({
   {
       type = "item",
       name = "lead-ore",
-      icon_size = 64, icon_mipmaps = 3,
+      icon_size = 64,
       icon = "__bzlead__/graphics/icons/lead-ore.png",
       pictures = {
         {filename="__bzlead__/graphics/icons/lead-ore.png", size=64, scale=0.25},
@@ -78,19 +78,9 @@ data:extend({
       },
       subgroup = "raw-resource",
       order = "t-c-a",
-      stack_size = util.get_stack_size(50)
+      stack_size = 50,
+      weight = 500
   },
 })
-
-local richness = data.raw.resource["lead-ore"].autoplace.richness_expression  
-
--- Modify lead autoplace richness: 
--- Up to 200 tiles it's standard
--- From 200 to 700 tiles, richness scales linearly down, until
--- From 700 tiles onward, it's about 1/6th the richness.
-data.raw.resource["lead-ore"].autoplace.richness_expression = 
-  richness * noise.if_else_chain(
-      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(200)), 1,
-      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(700)), 
-        100 / (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) - 100),
-      0.17)
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["lead-ore"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["lead-ore"] = {}

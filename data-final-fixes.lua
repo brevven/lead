@@ -1,4 +1,4 @@
-require("lead-recipe-modules")
+--require("lead-recipe-modules")
 require("lead-recipe-colors")
 require("lead-recipe-final-5d")
 require("lead-recipe-final-rrr")
@@ -18,7 +18,7 @@ for i, entity in pairs(data.raw.furnace) do
 end
 end 
 
-if mods["Krastorio2"] then 
+ if mods["Krastorio2"] then 
   util.replace_ingredient("rifle-magazine", "iron-plate", "lead-plate")
   util.replace_ingredient("anti-material-rifle-magazine", "iron-plate", "lead-plate")
   util.replace_some_ingredient("kr-crusher", "iron-beam", 5, "lead-plate", 5)
@@ -27,7 +27,7 @@ if mods["Krastorio2"] then
   util.replace_ingredient("uranium-fuel-cell", "steel-plate", "lead-plate")
   util.replace_some_ingredient("kr-fluid-storage-1", "steel-plate", 10, "lead-plate", 10)
   util.replace_some_ingredient("kr-fluid-storage-2", "steel-plate", 30, "lead-plate", 30)
-end
+end 
 
 if mods["modmashsplintergold"] then
   if mods["Krastorio2"] then 

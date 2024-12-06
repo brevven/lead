@@ -2,7 +2,7 @@
 --
 local util = require("__bzlead__.data-util");
 
-if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
+ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
   util.replace_ingredient("pipe", "iron-plate", "lead-plate")
   util.replace_ingredient("pipe-to-ground", "iron-plate", "lead-plate")
   util.replace_some_ingredient("storage-tank", "iron-plate", 10, "lead-plate", 10)
@@ -27,7 +27,7 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   -- ammunition
   util.replace_ingredient("firearm-magazine", "iron-plate", "lead-plate")
   util.replace_ingredient("shotgun-shell", "iron-plate", "lead-plate")
-end
+end 
 
 if util.me.more_ammo() then
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-lead"})
@@ -187,8 +187,9 @@ util.add_ingredient("plasma-turret", "lead-plate", 8)
 
 
 -- Other
-util.add_ingredient("rocket-turret", "lead-plate", 8)
-util.add_ingredient("hl-rocket-turret-recipe", "lead-plate", 20)
+--disabled for space age
+--util.add_ingredient("rocket-turret", "lead-plate", 8)
+--util.add_ingredient("hl-rocket-turret-recipe", "lead-plate", 20)
 
 
 -- Realistic Reactors
@@ -240,4 +241,3 @@ if mods.leighzerscrapyards then
   util.add_to_product("scrap-processing", "iron-plate", -1)
   util.add_product("scrap-processing", {"lead-plate", 1})
 end
-

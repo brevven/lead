@@ -7,4 +7,3 @@ require("compatibility/248k")
 require("compatibility/sciencecosttweakerm")
 require("compatibility/crafting-efficiency")
 
-require("lead-recipe-modules")
