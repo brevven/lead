@@ -2,6 +2,16 @@
 --
 local util = require("__bzlead__.data-util");
 
+local leb = util.me.more_entities() and "lead-expansion-bolt" or "lead-plate"
+
+if util.me.more_entities() then
+  util.set_product_probability("scrap-recycling", "battery", 0.06)
+  util.add_product("scrap-recycling", util.item("lead-expansion-bolt", 1, 0.01))
+else
+  util.set_product_probability("scrap-recycling", "battery", 0.08)
+  util.set_product_probability("scrap-recycling", "copper-cable", 0.03)
+end
+
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
   util.replace_ingredient("pipe", "iron-plate", "lead-plate")
   util.replace_ingredient("pipe-to-ground", "iron-plate", "lead-plate")
@@ -13,18 +23,30 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   
   util.replace_ingredient("sulfuric-acid", "iron-plate", "lead-plate")
   util.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
-  util.replace_some_ingredient("gun-turret", "iron-plate", 4, "lead-plate", 4)
+  util.replace_some_ingredient("gun-turret", "iron-plate", 8, leb, 8)
 
-  util.add_ingredient("big-electric-pole", "lead-plate", 2)
-  util.add_ingredient("large-electric-pole", "lead-plate", 2) --modded
-  util.add_ingredient("substation", "lead-plate", 2)
-  util.add_ingredient("electric-furnace", "lead-plate", 4)
+  util.add_ingredient("big-electric-pole", leb, 4)
+  util.add_ingredient("large-electric-pole", leb, 2) --modded
+  util.add_ingredient("substation", leb, 4)
+  util.replace_some_ingredient("electric-furnace", "steel-plate", 2, leb, 4)
   if not (mods.bzsilicon and util.has_ingredient("solar-panel", "solar-cell")) then
     util.add_ingredient("solar-panel", "lead-plate", 5)
   end
 
-  util.add_ingredient("flamethrower-turret", "lead-plate", 4)
-  util.add_ingredient("artillery-turret", "lead-plate", 40)
+  util.add_ingredient("flamethrower-turret", leb, 4)
+  util.add_ingredient("artillery-turret", leb, 40)
+  util.add_ingredient("laser-turret", leb, 2)
+  util.add_ingredient("rocket-turret", leb, 8)
+  util.add_ingredient("tesla-turret", leb, 4)
+  util.add_ingredient("electromagnetic-plant", leb, 8)
+  util.add_ingredient("lab", leb, 4)
+  util.replace_some_ingredient("assembling-machine-1", "iron-plate", 4, leb, 4)
+  util.replace_some_ingredient("chemical-plant", "steel-plate", 1, leb, 4)
+  util.replace_some_ingredient("chemical-plant", "steel-plate", 5, leb, 8)
+  util.add_ingredient("centrifuge", leb, 100)
+
+  util.add_ingredient("fusion-reactor", "lead-lithium-eutectic", 200)
+  util.replace_some_ingredient("fusion-power-cell", "lithium-plate", 1, "lead-lithium-eutectic", 1)
 
   -- ammunition
   util.replace_ingredient("firearm-magazine", "iron-plate", "lead-plate")
@@ -189,7 +211,6 @@ util.add_ingredient("plasma-turret", "lead-plate", 8)
 
 
 -- Other
-util.add_ingredient("rocket-turret", "lead-plate", 8)
 util.add_ingredient("hl-rocket-turret-recipe", "lead-plate", 20)
 
 

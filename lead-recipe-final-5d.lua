@@ -1,6 +1,7 @@
 local util = require("__bzlead__.data-util");
 
 if mods["5dim_core"] then
+local leb = util.me.more_entities() and "lead-expansion-bolt" or "lead-plate"
 
   data.raw.item["lead-plate"].subgroup = "plates-plates"
   data.raw.recipe["lead-plate"].subgroup = "plates-plates"
@@ -19,9 +20,10 @@ if mods["5dim_core"] then
         icon_size = 64, icon_mipmaps = 3,
         enabled = true,
         energy_required = 65,
-        ingredients = {{"lead-ore", 85}},
-        result = util.me.lead_plate,
-        result_count = 100,
+        ingredients = {util.item("lead-ore", 85)},
+        results = {util.item(util.me.lead_plate, 100)},
+        main_product = util.me.lead_plate,
+        localised_name = {"item-name.lead-plate"},
       }
     })
 
@@ -48,13 +50,16 @@ if mods["5dim_core"] then
               energy_required = 3.2,
               enabled = true,
               ingredients = {
-                  {"lead-dust", 1}
+                  util.item("lead-dust", 1)
               },
-              result = util.me.lead_plate
+              results = {util.item(util.me.lead_plate)},
+              main_product = util.me.lead_plate,
+              localised_name = {"item-name.lead-plate"},
           },
           {
               type = "recipe",
               name = "lead-dust",
+              main_product = "lead-dust",
               icon = "__bzlead__/graphics/icons/lead-powder.png",
               icon_size = 64, icon_mipmaps = 3,
               category = "mashering",
@@ -63,7 +68,7 @@ if mods["5dim_core"] then
               energy_required = 3.2,
               enabled = true,
               ingredients = {
-                  {"lead-ore", 1}
+                  util.item("lead-ore", 1)
               },
               results = {
                 {type="item", name = "lead-dust", amount=2},
@@ -79,9 +84,9 @@ if mods["5dim_core"] then
             icon_size = 64, icon_mipmaps = 3,
             enabled = true,
             energy_required = 65,
-            ingredients = {{"lead-dust", 85}},
-            result = util.me.lead_plate,
-            result_count = 100,
+            ingredients = {util.item("lead-dust", 85)},
+            results = {util.item(util.me.lead_plate, 100)},
+            localised_name = {"item-name.lead-plate"},
           }
     })
     local mks = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10"}
@@ -98,7 +103,17 @@ if mods["5dim_core"] then
     local items = {"5d-substation-", "5d-big-electric-pole-", "5d-solar-panel-"}
     for i, mk in pairs(mks) do
       for j, item in pairs(items) do 
-        util.add_ingredient(item..mk, "lead-plate", 2)
+        util.add_ingredient(item..mk, leb, 2)
+      end
+    end
+  end
+
+  if mods["5dim_energy"] then
+    local mks = {"02", "03", "04", "05", "06", "07", "08", "09", "10"}
+    local items = {"5d-solar-panel-"}
+    for i, mk in pairs(mks) do
+      for j, item in pairs(items) do 
+        util.replace_ingredient(item..mk, "copper-plate", "lead-plate")
       end
     end
   end
@@ -108,9 +123,9 @@ if mods["5dim_core"] then
     local items = {"5d-gun-turret-", "5d-gun-turret-big-", "5d-gun-turret-small-"}
     for i, mk in pairs(mks) do
       for j, item in pairs(items) do 
-        util.replace_some_ingredient(item..mk, "iron-plate", 2, "lead-plate", 2)
+        util.replace_some_ingredient(item..mk, "iron-plate", 2, leb, 2)
       end
-      util.replace_some_ingredient("5d-gun-turret-sniper-"..mk, "steel-plate", 1, "lead-plate", 1)
+      util.replace_some_ingredient("5d-gun-turret-sniper-"..mk, "steel-plate", 1, leb, 1)
     end
 
   end
