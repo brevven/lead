@@ -42,7 +42,7 @@ if mods["space-age"] then
       allow_decomposition = false
     },
   })
-  util.add_unlock("advanced-asteroid-processing", "alternative-metallic-asteroid-crushing")
+  util.add_unlock("space-platform-thruster", "alternative-metallic-asteroid-crushing")
 
 
 end
