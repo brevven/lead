@@ -1,3 +1,4 @@
+require("lead-asteroid-updates")
 require("lead-recipe-updates")
 require("lead-matter")
 require("omni")
@@ -7,4 +8,5 @@ require("compatibility/248k")
 require("compatibility/sciencecosttweakerm")
 require("compatibility/crafting-efficiency")
 
-require("lead-recipe-modules")
+local util = require("data-util")
+util.redo_recycling()

@@ -1,6 +1,8 @@
 local me = {}
 
 me.name = "bzlead"
+me.resources = {"lead-ore"}
+me.fluid_mining = false
 me.lead_ore = "lead-ore"
 me.lead_plate = "lead-plate"
 me.recipes = {me.lead_plate, "enriched-lead-plate", "enriched-lead", "lead-smelting-vulcanite", "molten-lead", "enriched-lead-smelting-vulcanite"}

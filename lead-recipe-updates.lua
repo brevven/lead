@@ -5,6 +5,8 @@ local util = require("__bzlead__.data-util");
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
   util.replace_ingredient("pipe", "iron-plate", "lead-plate")
   util.replace_ingredient("pipe-to-ground", "iron-plate", "lead-plate")
+  util.replace_ingredient("casting-pipe", "molten-iron", "molten-lead")
+  util.replace_ingredient("casting-pipe-to-ground", "molten-iron", "molten-lead")
   util.replace_some_ingredient("storage-tank", "iron-plate", 10, "lead-plate", 10)
   util.replace_ingredient("battery", "iron-plate", "lead-plate")
 

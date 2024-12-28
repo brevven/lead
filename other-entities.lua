@@ -18,8 +18,8 @@ data:extend({
     type = "recipe",
     name = "lead-chest",
     enabled = true,
-    ingredients = {{"lead-plate", 8}},
-    result = "lead-chest"
+    ingredients = {leadutil.item("lead-plate", 8)},
+    results = {leadutil.item("lead-chest")},
   },
 {
     type = "container",

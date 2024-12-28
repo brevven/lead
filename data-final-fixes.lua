@@ -1,13 +1,11 @@
-require("lead-recipe-modules")
 require("lead-recipe-colors")
 require("lead-recipe-final-5d")
 require("lead-recipe-final-rrr")
 require("lead-recipe-final-stacking")
 
-
 ----
-
 local util = require("__bzlead__.data-util");
+
 
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"]) then
 -- If furnaces are treated as furnaces, we need 2 outputs
