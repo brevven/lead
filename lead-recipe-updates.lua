@@ -191,6 +191,19 @@ util.replace_ingredient("shiveros_plutonium_fuel_cell", "iron-plate", "lead-plat
 util.replace_ingredient("shiveros_uranium-233_fuel_cell", "iron-plate", "lead-plate")
 util.replace_ingredient("shiveros_uranium-234_fuel_cell", "iron-plate", "lead-plate")
 
+-- Transplutonic
+util.replace_some_ingredient("pu238-fuel", "steel-plate", 5, "lead-plate", 5)
+util.replace_some_ingredient("np237-fuel", "steel-plate", 5, "lead-plate", 5)
+util.replace_some_ingredient("plutonium-mix-fuel", "steel-plate", 5, "lead-plate", 5)
+util.replace_some_ingredient("neptunium-mix-fuel", "steel-plate", 5, "lead-plate", 5)
+util.replace_some_ingredient("uranium-mix-fuel", "steel-plate", 5, "lead-plate", 5)
+util.replace_some_ingredient("plutonium-inv-dead", "steel-plate", 5, "lead-plate", 5)
+util.replace_some_ingredient("neptunium-inv-dead", "steel-plate", 5, "lead-plate", 5)
+util.replace_some_ingredient("uranium-inv-dead", "steel-plate", 5, "lead-plate", 5)
+util.replace_ingredient("castorempty", "iron-plate", "lead-plate")
+util.add_ingredient("breeder-reactor", "lead-plate", 250)
+util.add_ingredient("particle-accelerator", "lead-plate", 250)
+
 -- Hazmat suit
 util.add_ingredient("hazmat-suit", "lead-plate", 2)
 util.add_ingredient("mil-grade-fuel-cell", "lead-plate", 10)
