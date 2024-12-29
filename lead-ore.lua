@@ -6,6 +6,10 @@ data.raw.planet.nauvis.map_gen_settings.autoplace_controls["lead-ore"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["lead-ore"] = {}
 resource_autoplace.initialize_patch_set("lead-ore", true)
 
+if mods.tenebris then
+  data.raw.planet.tenebris.map_gen_settings.autoplace_controls["lead-ore"] = {}
+  data.raw.planet.tenebris.map_gen_settings.autoplace_settings.entity.settings["lead-ore"] = {}
+end
 
 
 data:extend({
