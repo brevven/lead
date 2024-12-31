@@ -3,6 +3,7 @@ local me = require("me")
 local util = {}
 util.me = me
 local regenerate_command = "bz-regenerate"
+local list_command = "bz-list"
 
 function decode(data)
     if type(data) == "string" then return data end
@@ -27,8 +28,8 @@ function util.check_fluid_mining()
   end
 end
 
-function util.get_list()
-    local p = game.item_prototypes[me.name.."-list"]
+function get_list()
+    local p = prototypes.item[me.name.."-list"]
     if p then
       data = p.localised_description
       return decode(data)
@@ -41,17 +42,27 @@ function util.force_enable_recipe(event, recipe_name)
   end
 end
 
-function util.list(event)
-  if event.command and string.lower(event.command) == "bzlist" then
+function list(event)
+  if event.command and string.lower(event.command) == "bz-list" then
     local player = game.players[event.player_index]
     if player and player.connected then
-      local list = util.get_list()
+      local list = get_list()
       if list and #list>0 then
         local filename = util.me.name..".txt"
-        game.write_file(filename, list, false, event.player_index)
+        helpers.write_file(filename, list, false, event.player_index)
         player.print("Wrote recipes to script-output/"..filename)
+      else
+        player.print("Please change your mod startup setting for this mod's modified recipes list.")
       end
     end
+  end
+end
+
+function util.add_list_command_handler()
+  script.on_event(defines.events.on_console_command, list)
+  
+  if not commands.commands[list_command] then
+    commands.add_command(list_command, "", function() end)
   end
 end
 
@@ -110,7 +121,7 @@ function util.warptorio2_expansion_helper()
   end
 end
 
-local usage = [[
+local usage_regenerate = [[
 Usage: /bz-regenerate all
 or     /bz-regenerate <planet> <resource> [<frequency> <size> <richness>]
     planet must be an internal name like nauvis
@@ -125,7 +136,7 @@ function util.add_regenerate_command_handler()
   script.on_event(defines.events.on_console_command, regenerate_ore)
   
   if not commands.commands[regenerate_command] then
-    commands.add_command( regenerate_command, usage, function() end)
+    commands.add_command( regenerate_command, usage_regenerate, function() end)
   end
 end
 
@@ -141,7 +152,7 @@ function regenerate_ore(event)
       return
     end
     if not (#params == 2 or #params == 5) then
-      game.print(usage)
+      game.print(usage_regenerate)
       return
     end
     local planet = params[1]
