@@ -481,9 +481,8 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a[firearm-magazine]-i",
   energy_required = data.raw.recipe["firearm-magazine"].energy_required * 2,
-  ingredients = {{"lead-plate", 4}, {"iron-plate", 5}},
-  result = "firearm-magazine",
-  result_count = 2,
+  ingredients = {util.item("lead-plate", 4), util.item("iron-plate", 5)},
+  results = {util.item("firearm-magazine", 2)},
   enabled = false,
   icons = {
     { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
@@ -499,8 +498,8 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a[firearm-magazine]-io",
   energy_required = data.raw.recipe["firearm-magazine"].energy_required,
-  ingredients = {{"iron-plate", 5}},
-  result = "firearm-magazine",
+  ingredients = {util.item("iron-plate", 5)},
+  results = {util.item("firearm-magazine")},
   enabled = false,
   icons = {
     { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
@@ -514,8 +513,8 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a[firearm-magazine]-c",
   energy_required = data.raw.recipe["firearm-magazine"].energy_required,
-  ingredients = {{"lead-plate", 3}, {"copper-plate", 1}},
-  result = "firearm-magazine",
+  ingredients = {util.item("lead-plate", 3), util.item("copper-plate", 1)},
+  results = {util.item("firearm-magazine")},
   enabled = false,
   icons = {
     { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
