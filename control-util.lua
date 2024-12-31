@@ -41,6 +41,20 @@ function util.force_enable_recipe(event, recipe_name)
   end
 end
 
+function util.list(event)
+  if event.command and string.lower(event.command) == "bzlist" then
+    local player = game.players[event.player_index]
+    if player and player.connected then
+      local list = util.get_list()
+      if list and #list>0 then
+        local filename = util.me.name..".txt"
+        game.write_file(filename, list, false, event.player_index)
+        player.print("Wrote recipes to script-output/"..filename)
+      end
+    end
+  end
+end
+
 
 function util.warptorio2_expansion_helper() 
   if script.active_mods["warptorio2_expansion"] then
