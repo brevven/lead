@@ -55,30 +55,14 @@ data:extend({
       layers =
       {
         {
-          filename = "__bzlead__/graphics/entity/lead-chest.png",
-          priority = "extra-high",
-          width = 33,
-          height = 38,
-          shift = util.by_pixel(0, -0.5),
-          hr_version =
-          {
             filename = "__bzlead__/graphics/entity/hr-lead-chest.png",
             priority = "extra-high",
             width = 66,
             height = 76,
             shift = util.by_pixel(-0.5, -0.5),
             scale = 0.5
-          }
         },
         {
-          filename = "__bzlead__/graphics/entity/lead-chest-shadow.png",
-          priority = "extra-high",
-          width = 55,
-          height = 25,
-          shift = util.by_pixel(10, 6.5),
-          draw_as_shadow = true,
-          hr_version =
-          {
             filename = "__bzlead__/graphics/entity/hr-lead-chest-shadow.png",
             priority = "extra-high",
             width = 110,
@@ -86,7 +70,6 @@ data:extend({
             shift = util.by_pixel(10.5, 6),
             draw_as_shadow = true,
             scale = 0.5
-          }
         }
       }
     },
@@ -112,15 +95,6 @@ data:extend({
     hidden_in_factoriopedia = true,
     animation =
     {
-      filename = "__bzlead__/graphics/entity/lead-chest-remnants.png",
-      line_length = 1,
-      width = 63,
-      height = 39,
-      frame_count = 1,
-      direction_count = 1,
-      shift = util.by_pixel(12, 0),
-      hr_version =
-      {
         filename = "__bzlead__/graphics/entity/hr-lead-chest-remnants.png",
         line_length = 1,
         width = 126,
@@ -129,7 +103,6 @@ data:extend({
         direction_count = 1,
         shift = util.by_pixel(12, 0),
         scale = 0.5
-      }
     }
   },
 

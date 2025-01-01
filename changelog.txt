@@ -3,6 +3,7 @@ Version: 2.0.8
 Date: 2025-01-01
   Fixes:
     - Fix some localization for alternate ammunition recipes
+    - Use old hr version for entities (now that hr is the only resolution supported)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.7
 Date: 2025-01-01

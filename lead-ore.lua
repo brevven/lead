@@ -54,25 +54,16 @@ data:extend({
     },
 
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
-        stages =
-        {
-          sheet =
-          {
-      filename = "__bzlead__/graphics/entity/ores/lead-ore.png",
-      priority = "extra-high",
-      size = 64,
-      frame_count = 8,
-      variation_count = 8,
-      hr_version =
-      {
-      filename = "__bzlead__/graphics/entity/ores/hr-lead-ore.png",
+    stages =
+    {
+      sheet = {
+        filename = "__bzlead__/graphics/entity/ores/hr-lead-ore.png",
         priority = "extra-high",
         size = 128,
         frame_count = 8,
         variation_count = 8,
         scale = 0.5
       }
-          }
     },
   },
   {
