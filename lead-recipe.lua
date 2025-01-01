@@ -483,6 +483,7 @@ data:extend({
   energy_required = data.raw.recipe["firearm-magazine"].energy_required * 2,
   ingredients = {util.item("lead-plate", 4), util.item("iron-plate", 5)},
   results = {util.item("firearm-magazine", 2)},
+  localised_name = {"item-name.firearm-magazine"},
   enabled = false,
   icons = {
     { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
@@ -500,6 +501,7 @@ data:extend({
   energy_required = data.raw.recipe["firearm-magazine"].energy_required,
   ingredients = {util.item("iron-plate", 5)},
   results = {util.item("firearm-magazine")},
+  localised_name = {"item-name.firearm-magazine"},
   enabled = false,
   icons = {
     { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
@@ -515,6 +517,7 @@ data:extend({
   energy_required = data.raw.recipe["firearm-magazine"].energy_required,
   ingredients = {util.item("lead-plate", 3), util.item("copper-plate", 1)},
   results = {util.item("firearm-magazine")},
+  localised_name = {"item-name.firearm-magazine"},
   enabled = false,
   icons = {
     { icon = "__base__/graphics/icons/firearm-magazine.png", icon_size = 64},
