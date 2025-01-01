@@ -2,6 +2,7 @@
 Version: 2.0.9
 Date: 2025-01-01
   Features:
+    - Hot metals mod support
     - Casting for lead expansion bolts
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.8

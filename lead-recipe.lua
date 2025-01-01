@@ -104,9 +104,6 @@ data:extend({
     stack_size=100,
     icon = "__bzlead__/graphics/icons/lead-expansion-bolt.png",
     icon_size = 128,
-    pictures = {
-      {filename="__bzlead__/graphics/icons/lead-expansion-bolt.png", size=128, scale=0.25},
-    },
     order = "a[basic-intermediates]-e[expansion-bolt]",
   },
   {

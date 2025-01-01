@@ -10,6 +10,7 @@
       "base >= 1.1.0",
       "? space-age",
       "? bzsilicon",
+      "? hot-metals",
       "? space-exploration",
       "? Krastorio2",
       "? Rich-Rocks-Requiem",
