@@ -121,6 +121,33 @@ data:extend({
     allow_productivity = true,
   },
 })
+if mods["space-age"] then
+data:extend({
+  {
+    type = "recipe",
+    name = "casting-lead-expansion-bolt",
+    category = "metallurgy",
+    subgroup = "vulcanus-processes",
+    order = "z[casting]-d[casting-solder]",
+    icons = {
+      {icon = "__bzlead__/graphics/icons/lead-expansion-bolt.png", icon_size = 128, shift={0,8}},
+      {icon = "__space-age__/graphics/icons/fluid/molten-iron.png", icon_size = 64, shift={-4,-4}},
+      {icon = "__bzlead__/graphics/icons/molten-lead-sa.png", icon_size = 64, shift={4,-4}},
+    },
+    enabled = false,
+    ingredients = {
+      util.fluid("molten-lead", 50),
+      util.fluid("molten-iron", 50),
+    },
+    energy_required = 5,
+    allow_decomposition = false,
+    results = {{type = "item", name = "lead-expansion-bolt", amount = 10}},
+    allow_productivity = true
+  },
+})
+util.add_unlock("foundry", "casting-lead-expansion-bolt")
+end
+
 end
 
 -- vulcanus
