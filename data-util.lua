@@ -165,6 +165,17 @@ function util.use_fluid_mining_final()
   end
 end
 
+-- If Hot metals mod is enabled, mark these metals as hot
+function util.add_hot_metals(metals)
+  if HotMetals and HotMetals.items then
+    for _, metal in pairs(metals) do
+      if data.raw.item[metal] or (metal.name and data.raw.item[metal.name]) then
+        table.insert(HotMetals.items, metal)
+      end
+    end
+  end
+end
+
 
 -- se landfill
 -- params: ore, icon_size

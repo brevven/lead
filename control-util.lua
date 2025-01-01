@@ -122,6 +122,7 @@ function util.warptorio2_expansion_helper()
 end
 
 local usage_regenerate = [[
+Recommend saving the game before running this command.
 Usage: /bz-regenerate all
 or     /bz-regenerate <planet> <resource> [<frequency> <size> <richness>]
     planet must be an internal name like nauvis
@@ -130,7 +131,7 @@ or     /bz-regenerate <planet> <resource> [<frequency> <size> <richness>]
 Regenerates ore patches. If frequency/size/richness are provided, the planet will use those settings from now on, as well.
   - Separate arguments with spaces, do not use < >, [ ], quotes or other symbols
   - This action can take a while for larger maps!
-  - Ores can sometimes overlap on regeneration.
+  - Ores can sometimes overlap on regeneration. This can sometimes hide ore patches. If none seem to be made for a resource, regenerate just that resource and tweak frequency/size. 
 ]]
 function util.add_regenerate_command_handler()
   script.on_event(defines.events.on_console_command, regenerate_ore)
