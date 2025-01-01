@@ -109,6 +109,7 @@ data:extend({
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
+    hidden_in_factoriopedia = true,
     animation =
     {
       filename = "__bzlead__/graphics/entity/lead-chest-remnants.png",
