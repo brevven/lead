@@ -12,6 +12,9 @@ else
   util.set_product_probability("scrap-recycling", "copper-cable", 0.03)
 end
 
+util.replace_some_ingredient("basic-crusher", "steel-plate", 2, "lead-expansion-bolt", 2)
+util.replace_ingredient("basic-crusher", "iron-plate", "lead-plate")
+
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
   util.replace_ingredient("pipe", "iron-plate", "lead-plate")
   util.replace_ingredient("pipe-to-ground", "iron-plate", "lead-plate")
