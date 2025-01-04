@@ -89,16 +89,12 @@ data:extend({
 -- From 200 to 700 tiles, richness scales linearly down, until
 -- From 700 tiles onward, it's about 1/6th the richness.
 local richness = data.raw.resource["lead-ore"].autoplace.richness_expression  
-log("Lead richness pre")
-log(richness)
 data.raw.resource["lead-ore"].autoplace.richness_expression = richness..[[*
 if(distance_from_nearest_point{x = x, y = y, points = starting_positions} < 200, 1,
   if(distance_from_nearest_point{x = x, y = y, points = starting_positions} < 700,
     100/(distance_from_nearest_point{x = x, y = y, points = starting_positions} - 100), 0.17))
    ]]
 local richness = data.raw.resource["lead-ore"].autoplace.richness_expression  
-log("Lead richness post")
-log(richness)
 --  richness * noise.if_else_chain(
 --      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(200)), 1,
 --      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(700)), 

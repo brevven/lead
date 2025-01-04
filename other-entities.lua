@@ -32,12 +32,12 @@ data:extend({
     corpse = "small-remnants",
     open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
-    surface_conditions = {
+    surface_conditions = mods["space-age"] and {
       {
         property = "gravity",
         min = 0.1
       }
-    },
+    } or nil,
     resistances =
     {
       {
