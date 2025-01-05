@@ -61,7 +61,8 @@ data:extend({
     icon_size = 64, icon_mipmaps = 3,
     subgroup = "raw-material",
     order = "b[lead-plate]",
-    stack_size = util.get_stack_size(100)
+    stack_size = util.get_stack_size(100),
+    weight = 2*kg,
   },
 --  mods["TheBigFurnace"] and {
 --    type = "recipe",
@@ -105,6 +106,7 @@ data:extend({
     icon = "__bzlead__/graphics/icons/lead-expansion-bolt.png",
     icon_size = 128,
     order = "a[basic-intermediates]-e[expansion-bolt]",
+    weight = 2*kg,
   },
   {
     type = "recipe",
@@ -256,7 +258,7 @@ data:extend({
     drop_sound = space_age_item_sounds.agriculture_inventory_move,
     stack_size = 50,
     default_import_location = "gleba",
-    weight = 1 * kg,
+    weight = 2 * kg,
   },
   {
     type = "recipe",
@@ -322,7 +324,7 @@ data:extend({
     drop_sound = space_age_item_sounds.metal_small_inventory_move,
     stack_size = 100,
     default_import_location = "aquilo",
-    weight = 1 * kg,
+    weight = 2 * kg,
   },
   {
     type = "recipe",
