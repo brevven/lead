@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.11
+Date: 2025-01-05
+  Changes:
+    - Vulcanus rocks now have some lead ore to avoids possible soft locks
+    - Gleba highlands have rocks with lead ore to avoid possible soft locks
+---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 2025-01-04
   Changes:

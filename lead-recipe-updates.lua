@@ -280,3 +280,7 @@ if mods.leighzerscrapyards then
   util.add_product("scrap-processing", {"lead-plate", 1})
 end
 
+util.add_minable_result("simple-entity", "huge-volcanic-rock", {type="item", name="lead-ore", amount_min=10, amount_max=24})
+util.add_minable_result("simple-entity", "big-volcanic-rock", {type="item", name="lead-ore", amount_min=5, amount_max=10})
+util.add_gleba_rock("lead-ore")
+
