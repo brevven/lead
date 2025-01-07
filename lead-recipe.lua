@@ -290,6 +290,8 @@ data:extend({
     category = "organic-or-hand-crafting",
     subgroup = "agriculture-processes",
     order = "e[chelation]-a[lead]",
+    auto_recycle = false,
+    auto_recycle_helper = false,
     icons = {
       {icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", size = 64, shift={-4,-4}},
       {icon = "__bzlead__/graphics/icons/lead-ore.png", size = 64, shift={4,4}},

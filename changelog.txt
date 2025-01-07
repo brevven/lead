@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.12
+Date: 2025-01-06
+  Changes:
+    - Do more to respect disabling of recycling recipes
+    - Lead ore no longer recycles into chelated lead.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.11
 Date: 2025-01-05
   Changes:

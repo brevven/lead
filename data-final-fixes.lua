@@ -40,3 +40,5 @@ if mods["space-exploration"] then
   -- core mining balancing
   util.add_to_product("se-core-fragment-omni", "lead-ore", -4)
 end
+
+util.size_recycler_output()

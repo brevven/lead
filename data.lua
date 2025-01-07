@@ -8,3 +8,5 @@ require("lead-compressed")
 require("compatibility.data.hot-metals")
 -- require("lead-sim")
 
+local util = require("data-util")
+util.prepare_recycling_helper()
