@@ -119,7 +119,12 @@ end
 
 -- Add the gleba rock. If it exists, still add resource to mine from it
 function util.add_gleba_rock(resource, amount_min, amount_max)
-  if not data.raw.planet.gleba then return end
+  if (not data.raw.planet.gleba or
+      not data.raw.planet.gleba.map_gen_settings or -- attempted compatibility fixes
+      not data.raw.planet.gleba.map_gen_settings.autoplace_settings or
+      not data.raw.planet.gleba.map_gen_settings.autoplace_settings.entity or
+      not data.raw.planet.gleba.map_gen_settings.autoplace_settings.entity.settings
+  ) then return end
   if not data.raw["simple-entity"]["gleba-rock"] then
     local autoplace_utils = require("autoplace_utils")
     local hit_effects = require ("__base__.prototypes.entity.hit-effects")
