@@ -24,7 +24,7 @@ if mods["space-age"] then
       },
       category = "crushing",
       subgroup="space-crushing",
-      order = "c-a-b",
+      order = "b-a-z-b",
       auto_recycle = false,
       enabled = false,
       ingredients =
