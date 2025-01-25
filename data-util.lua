@@ -804,11 +804,19 @@ function add_or_add_to_ingredient(recipe, ingredient, quantity)
   end
 end
 
+function util.get_item(name)
+  if data.raw.item[name] then return data.raw.item[name] end
+  if data.raw.armor[name] then return data.raw.armor[name] end
+  if data.raw["space-platform-starter-pack"] and data.raw["space-platform-starter-pack"][name] then return data.raw["space-platform-starter-pack"][name] end
+  -- TODO add more subtypes of item here
+  return nil
+end
+
 -- Add a given quantity of ingredient to a given recipe
 function util.add_ingredient(recipe_name, ingredient, quantity, options)
   if not should_force(options) and bypass(recipe_name) then return end
   local is_fluid = not not data.raw.fluid[ingredient]
-  if data.raw.recipe[recipe_name] and (data.raw.item[ingredient] or is_fluid) then
+  if data.raw.recipe[recipe_name] and (util.get_item(ingredient) or is_fluid) then
     me.add_modified(recipe_name)
     prepare_redo_recycling(recipe_name)
     add_ingredient(data.raw.recipe[recipe_name], ingredient, quantity, is_fluid)
@@ -1767,6 +1775,21 @@ function util.redo_recycling()
       recipe.auto_recycle = recipe.auto_recycle_helper -- keeping this outside conditional to improve fidelity across multiple mods
       if recipe.redo_recycling then
         recycling.generate_recycling_recipe(recipe)
+      end
+    end
+    -- Find all recycling recipes that result in armor and make sure not to output more than 1
+    for _, recipe in pairs(data.raw.recipe) do
+      if recipe.name:find("recycling") then
+        for _, product in pairs(recipe.results) do
+          if data.raw.armor[product.name] then
+            if product.amount then
+              if product.amount > .99 then 
+                product.amount = 1 
+                product.extra_count_fraction = nil
+              end
+            end
+          end
+        end
       end
     end
   end

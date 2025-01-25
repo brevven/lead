@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.16
 Date: 2025-01-25
+  Fixes:
+    - Improve compatibility with mods that change armor recipes in certain ways
   Changes:
     - When byproducts are turned off, don't add extra furnace output
 ---------------------------------------------------------------------------------------------------
