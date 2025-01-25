@@ -8,12 +8,10 @@ local util = require("__bzlead__.data-util");
 
 
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"]) then
--- If furnaces are treated as furnaces, we need 2 outputs
-for i, entity in pairs(data.raw.furnace) do
-  if entity.result_inventory_size ~= nil and entity.result_inventory_size < 2 and util.contains(entity.crafting_categories, "smelting") then
-    entity.result_inventory_size = 2
+  if util.me.byproduct() then
+    -- If furnaces are treated as furnaces, we need 2 outputs
+    util.set_minimum_furnace_outputs("smelting", 2)
   end
-end
 end 
 
 if mods["Krastorio2"] then 
