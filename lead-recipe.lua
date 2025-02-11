@@ -32,6 +32,7 @@ data:extend({
 --          },
 --        } or
     enabled = true,
+    allow_productivity = true,
     energy_required = 6.4,
     ingredients = {util.item("lead-ore", 2)},
     results = util.me.byproduct() and {
