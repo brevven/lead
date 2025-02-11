@@ -14,3 +14,5 @@ util.redo_recycling()
 if mods.Asteroid_Mining and not data.raw.item["asteroid-lead-ore"] then
   util.addtype("lead-ore", {a = 0,r = 0.35,g = 0.10,b = 0.10})
 end
+
+util.add_shiftite_recipe("lead-plate", {"alpha"}, 1)

@@ -1,7 +1,7 @@
 local me = {}
 
 me.name = "bzlead"
-me.resources = {"lead-ore"}
+me.resources = {{"lead-ore", "nauvis"}}
 me.fluid_mining = false
 me.lead_ore = "lead-ore"
 me.lead_plate = "lead-plate"

@@ -127,6 +127,35 @@ function util.copy_recipe(recipe_name, new_recipe_name)
   end
 end
 
+function util.add_shiftite_recipe(item, shiftites, quantity)
+  if not mods["janus"] then return end
+  if not data.raw.item[item] then return end
+  local its = {}
+  for _, shiftite in pairs(shiftites) do
+    local it = "janus-shiftite-"..shiftite
+    if data.raw.item[it] then
+      table.insert(its, util.item(it, quantity))
+    end
+  end
+  if its then
+    local name = "shiftite-to-"..item
+    data:extend({{
+      type = "recipe",
+      name = name,
+      localised_name = {"", {"item-name."..item}, " ← Shiftite"},
+      category = "janus-shiftite",
+      subgroup = "janus-basic-from-shiftite",
+      ingredients = its,
+      results = {util.item(item, 5)},
+      energy_required = 2.5,
+      order = "zzz",
+      enabled = false,
+      auto_recycle = false,
+    }})
+    util.add_unlock("janus-time-distorter", name)
+  end
+end
+
 -- Add the gleba rock. If it exists, still add resource to mine from it
 function util.add_gleba_rock(resource, amount_min, amount_max)
   if (not data.raw.planet.gleba or
@@ -785,7 +814,7 @@ end
 -- Add a given quantity of ingredient to a given recipe
 function util.add_or_add_to_ingredient(recipe_name, ingredient, quantity, options)
   if not should_force(options) and bypass(recipe_name) then return end
-  if data.raw.recipe[recipe_name] and data.raw.item[ingredient] then
+  if data.raw.recipe[recipe_name] and util.get_item(ingredient) then
     me.add_modified(recipe_name)
     prepare_redo_recycling(recipe_name)
     add_or_add_to_ingredient(data.raw.recipe[recipe_name], ingredient, quantity)
@@ -800,13 +829,15 @@ function add_or_add_to_ingredient(recipe, ingredient, quantity)
         return
       end
     end
-    table.insert(recipe.ingredients, {ingredient, quantity})
+    table.insert(recipe.ingredients, util.item(ingredient, quantity))
   end
 end
 
 function util.get_item(name)
   if data.raw.item[name] then return data.raw.item[name] end
   if data.raw.armor[name] then return data.raw.armor[name] end
+  if data.raw.fluid[name] then return data.raw.fluid[name] end
+  if data.raw.capsule[name] then return data.raw.capsule[name] end
   if data.raw["space-platform-starter-pack"] and data.raw["space-platform-starter-pack"][name] then return data.raw["space-platform-starter-pack"][name] end
   -- TODO add more subtypes of item here
   return nil
@@ -897,7 +928,12 @@ function add_product(recipe, product)
   if recipe ~= nil then
     if product.name and data.raw[product.type][product.name] then
       if recipe.results == nil then
-        recipe.results = {{recipe.result, recipe.result_count and recipe.result_count or 1}}
+        recipe.results = {}
+      end
+      for _, old in pairs(recipe.results) do
+        if old.name == product.name then
+          return
+        end
       end
       recipe.result = nil
       recipe.result_count = nil
@@ -1489,14 +1525,10 @@ function util.add_to_ingredient(recipe, ingredient, amount, options)
 end
 
 function add_to_ingredient(recipe, it, amount)
-	if recipe ~= nil and recipe.ingredients ~= nil then
+	if recipe and recipe.ingredients then
 		for i, ingredient in pairs(recipe.ingredients) do
 			if ingredient.name == it then
         ingredient.amount = ingredient.amount + amount
-        return
-      end
-			if ingredient[1] == it then
-        ingredient[2] = ingredient[2] + amount
         return
       end
 		end
@@ -1542,6 +1574,16 @@ function util.add_minable_result(t, name, result)
     else
       data.raw[t][name].minable.results = {result}
     end
+  end
+end
+
+function util.set_surface_property(surface, condition, value)
+  if not data.raw["surface-property"][condition] then return end
+  if data.raw.surface[surface] then
+    data.raw.surface[surface].surface_properties[condition] = value
+  end
+  if data.raw.planet[surface] then
+    data.raw.planet[surface].surface_properties[condition] = value
   end
 end
 
@@ -1629,6 +1671,7 @@ end
 function remove_prior_unlocks(tech, recipe)
   local technology = data.raw.technology[tech]
   if technology then
+    log("Removing prior unlocks for ".. tech)
     util.remove_recipe_effect(tech, recipe)
     if technology.prerequisites then
       for i, prerequisite in pairs(technology.prerequisites) do
@@ -1664,6 +1707,7 @@ function util.replace_ingredients_prior_to(tech, old, new, multiplier)
 end
 
 function replace_ingredients_prior_to(tech, old, new, multiplier)
+  log("Replacing for tech "..tech)
   local technology = data.raw.technology[tech]
   if technology then
     if technology.effects then
