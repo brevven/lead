@@ -23,7 +23,7 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
   util.replace_some_ingredient("storage-tank", "iron-plate", 10, "lead-plate", 10)
   util.replace_ingredient("battery", "iron-plate", "lead-plate")
 
-  
+
   util.replace_ingredient("sulfuric-acid", "iron-plate", "lead-plate")
   util.replace_ingredient("uranium-fuel-cell", "iron-plate", "lead-plate")
   util.replace_some_ingredient("gun-turret", "iron-plate", 8, leb, 8)
@@ -57,13 +57,13 @@ if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting
 end
 
 if util.me.more_ammo() then
-  util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-lead"})
-  util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-only"})
-  util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-copper-lead"})
+  util.add_effect("military", { type = "unlock-recipe", recipe = "firearm-magazine-iron-lead" })
+  util.add_effect("military", { type = "unlock-recipe", recipe = "firearm-magazine-iron-only" })
+  util.add_effect("military", { type = "unlock-recipe", recipe = "firearm-magazine-copper-lead" })
   if mods.Krastorio2 and util.me.get_setting("kr-more-realistic-weapon") then
-    util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-iron-lead"})
-    util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-iron"})
-    util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-copper-lead"})
+    util.add_effect("military", { type = "unlock-recipe", recipe = "rifle-magazine-iron-lead" })
+    util.add_effect("military", { type = "unlock-recipe", recipe = "rifle-magazine-iron" })
+    util.add_effect("military", { type = "unlock-recipe", recipe = "rifle-magazine-copper-lead" })
   end
 end
 
@@ -76,7 +76,7 @@ util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
 if mods["space-exploration"] then
   util.replace_ingredient("effectivity-module", "copper-cable", "battery", 5)
 end
-util.add_product("se-scrap-recycling", {name="lead-ore", type="item", amount=1, probability=0.1})
+util.add_product("se-scrap-recycling", { name = "lead-ore", type = "item", amount = 1, probability = 0.1 })
 util.replace_some_ingredient("se-pulveriser", "iron-plate", 10, "lead-plate", 10)
 util.replace_some_ingredient("se-canister", "copper-plate", 5, "lead-plate", 5)
 util.add_ingredient("industrial-furnace", "lead-plate", 16) -- AAII
@@ -116,15 +116,15 @@ if mods["eve-weaponry"] then
   util.replace_ingredient("small-carbonized-lead", "iron-plate", "lead-plate")
 end
 
-util.add_ingredient("howitzer-turret-recipe","lead-plate", 8)
+util.add_ingredient("howitzer-turret-recipe", "lead-plate", 8)
 
 -- Additional turrets
-util.add_ingredient("at-acidthrower-turret","lead-plate", 4)
-util.add_ingredient("at-cannon-turret-mk1","lead-plate", 4)
-util.add_ingredient("at-rocket-turret-mk1","lead-plate", 4)
+util.add_ingredient("at-acidthrower-turret", "lead-plate", 4)
+util.add_ingredient("at-cannon-turret-mk1", "lead-plate", 4)
+util.add_ingredient("at-rocket-turret-mk1", "lead-plate", 4)
 util.replace_ingredient("small-coal-cannon-shell", "copper-plate", "lead-plate")
 util.replace_ingredient("small-coal-cannon-shell", "copper-plate", "lead-plate")
-util.add_ingredient("at_A1_b","lead-plate", 20)
+util.add_ingredient("at_A1_b", "lead-plate", 20)
 
 -- Other one-offs
 util.replace_some_ingredient("zinfinite_buffer_fluid_tank1", "iron-plate", 1000, "lead-plate", 1000)
@@ -183,6 +183,7 @@ util.replace_ingredient("empty-fuel-cell-recipe", "plastic-bar", "lead-plate")
 -- Nuclear fuel, Plutonium energy
 util.replace_ingredient("breeder-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
+util.replace_ingredient("MOX-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("MOX-fuel", "iron-plate", "lead-plate")
 
 -- True Nukes
@@ -211,7 +212,7 @@ util.add_ingredient("particle-accelerator", "lead-plate", 250)
 util.add_ingredient("hazmat-suit", "lead-plate", 2)
 util.add_ingredient("mil-grade-fuel-cell", "lead-plate", 10)
 
--- RITEG 
+-- RITEG
 util.add_ingredient("RITEG-1", "lead-plate", 10)
 util.add_ingredient("RITEG-cyan", "lead-plate", 10)
 util.add_ingredient("RITEG-breeder", "lead-plate", 10)
@@ -239,7 +240,7 @@ util.replace_ingredient("Nuclear_Train", "iron-plate", "lead-plate")
 -- Uranium Rework
 util.add_ingredient("uraniumrework-uranium-waste-container", "lead-plate", 25)
 
--- Schall 
+-- Schall
 util.add_ingredient("Schall-radioactive-waste-incinerator", "lead-plate", 25)
 util.replace_ingredient("Schall-sniper-firearm-magazine", "iron-plate", "lead-plate")
 util.add_ingredient("Schall-rocket-turret", "lead-plate", 8)
@@ -277,10 +278,11 @@ util.add_ingredient("storehouse-basic", "lead-plate", 8)
 -- Leighzer's scrap
 if mods.leighzerscrapyards then
   util.add_to_product("scrap-processing", "iron-plate", -1)
-  util.add_product("scrap-processing", {"lead-plate", 1})
+  util.add_product("scrap-processing", { "lead-plate", 1 })
 end
 
-util.add_minable_result("simple-entity", "huge-volcanic-rock", {type="item", name="lead-ore", amount_min=10, amount_max=24})
-util.add_minable_result("simple-entity", "big-volcanic-rock", {type="item", name="lead-ore", amount_min=5, amount_max=10})
+util.add_minable_result("simple-entity", "huge-volcanic-rock",
+  { type = "item", name = "lead-ore", amount_min = 10, amount_max = 24 })
+util.add_minable_result("simple-entity", "big-volcanic-rock",
+  { type = "item", name = "lead-ore", amount_min = 5, amount_max = 10 })
 util.add_gleba_rock("lead-ore")
-
