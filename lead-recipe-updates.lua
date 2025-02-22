@@ -190,7 +190,7 @@ end
 
 -- Plutonium Energy
 if mods["PlutoniumEnergy"] then
-  util.add_ingredient("breader-reactor", "lead-plate", 1000)
+  util.add_ingredient("breeder-reactor", "lead-plate", 1000)
   util.add_ingredient("MOX-reactor", "lead-plate", 200)
   util.add_ingredient("nuclear-reactor", "lead-plate", 500)
 
