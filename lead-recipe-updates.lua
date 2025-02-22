@@ -199,9 +199,6 @@ if mods["PlutoniumEnergy"] then
   util.replace_ingredient("breeder-fuel-cell-from-MOX-fuel-cell", "iron-plate", "lead-plate")
   util.replace_ingredient("MOX-fuel-cell", "iron-plate", "lead-plate")
   util.replace_ingredient("plutonium-fuel-cell", "iron-plate", "lead-plate")
-
-  util.add_ingredient("nuclear-fuel", "lead-plate", 2)
-  util.add_ingredient("plutonium-fuel", "lead-plate", 2)
 end
 
 -- True Nukes
