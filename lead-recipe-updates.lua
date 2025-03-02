@@ -182,8 +182,10 @@ util.replace_ingredient("empty-fuel-cell-recipe", "plastic-bar", "lead-plate")
 
 -- Nuclear fuel, Plutonium energy
 util.replace_ingredient("breeder-fuel-cell", "iron-plate", "lead-plate")
+util.replace_ingredient("MOX-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("MOX-fuel", "iron-plate", "lead-plate")
+util.replace_ingredient("mox-fuel", "iron-plate", "lead-plate")
 
 -- True Nukes
 util.replace_ingredient("tritium-breeder-fuel-cell", "iron-plate", "lead-plate")
