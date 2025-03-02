@@ -38,6 +38,7 @@ if mods["space-age"] then
         {type = "item", name = "iron-ore", amount = 7},
         {type = "item", name = "metallic-asteroid-chunk", amount = 1, probability = 0.1}
       },
+      hide_from_signal_gui = false,
       allow_productivity = true,
       allow_decomposition = false
     },
