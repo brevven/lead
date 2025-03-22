@@ -1,6 +1,6 @@
-local resource_autoplace = require('resource-autoplace');
-
+local resource_autoplace = require('resource-autoplace')
 local util = require("__bzlead__.data-util");
+local item_sounds = require('__base__.prototypes.item_sounds')
 
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["lead-ore"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["lead-ore"] = {}
@@ -81,6 +81,9 @@ data:extend({
       order = "t-c-a",
       stack_size = util.get_stack_size(50),
       weight = 4.5*kg,
+      inventory_move_sound = item_sounds.wire_inventory_move,
+      pick_sound = item_sounds.wire_inventory_pickup,
+      drop_sound = item_sounds.wire_inventory_move,
   },
 })
 

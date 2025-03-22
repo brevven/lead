@@ -1,6 +1,7 @@
 -- Lead smelting
 
 local util = require("__bzlead__.data-util");
+local item_sounds = require('__base__.prototypes.item_sounds')
 
 if (not mods["pyrawores"] and not mods["bobplates"] and not mods["angelssmelting"] and not mods["IndustrialRevolution"]) then
 data:extend({
@@ -64,6 +65,9 @@ data:extend({
     order = "b[lead-plate]",
     stack_size = util.get_stack_size(100),
     weight = 2*kg,
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
   },
 --  mods["TheBigFurnace"] and {
 --    type = "recipe",
@@ -108,6 +112,9 @@ data:extend({
     icon_size = 128,
     order = "a[basic-intermediates]-e[expansion-bolt]",
     weight = 2*kg,
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
   },
   {
     type = "recipe",
