@@ -44,6 +44,7 @@ if mods["space-age"] then
     },
   })
   util.add_unlock("space-platform-thruster", "alternative-metallic-asteroid-crushing")
+  util.add_to_productivity_research("asteroid-productivity", "alternative-metallic-asteroid-crushing")
 
 
 end
