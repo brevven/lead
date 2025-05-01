@@ -1,7 +1,7 @@
 -- Matter recipes for Krastorio2
 if mods["Krastorio2"] then
-local util = require("__bzlead__.data-util");
-local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
+local util = require("data-util");
+local matter = require("__Krastorio2__/prototypes/libraries/matter")
 
 data:extend(
 {
@@ -20,6 +20,7 @@ data:extend(
         scale = 1.25,
       }
     },
+    effects = {},
     prerequisites = {"kr-matter-processing"},
     unit =
   	{
@@ -28,35 +29,41 @@ data:extend(
       {
         {"production-science-pack", 1},
         {"utility-science-pack", 1},
-        {"matter-tech-card", 1}
+        {"kr-matter-tech-card", 1}
       },
       time = 45
     }
   },
 })
 
-local lead_ore_matter = 
-	{
-    item_name = "lead-ore",
-    minimum_conversion_quantity = 10,
-    matter_value = 5,
+util.k2matter({
+	k2matter = {
+    material = {
+      name = "lead-ore",
+      type = "item",
+      amount = 10,
+    },
+    matter_count = 5,
     energy_required = 1,
-    need_stabilizer = false,
-    unlocked_by_technology = "lead-matter-processing"
+    needs_stabilizer = false,
+    allow_productivity = true,
+    unlocked_by = "lead-matter-processing"
 	}
-matter.createMatterRecipe(lead_ore_matter)
+}, false)
 
-
-local lead_plate_matter = 
-	{
-    item_name = "lead-plate",
-    minimum_conversion_quantity = 10,
-    matter_value = 7.5,
+util.k2matter({
+	k2matter = {
+    material = {
+      name = "lead-plate",
+      type = "item",
+      amount = 10,
+    },
+    matter_count = 7.5,
     energy_required = 2,
-    only_deconversion = true,
-    need_stabilizer = true,
-    unlocked_by_technology = "lead-matter-processing"
+    needs_stabilizer = true,
+    allow_productivity = true,
+    unlocked_by = "lead-matter-processing"
 	}
-matter.createMatterRecipe(lead_plate_matter)
+}, true)
 
 end

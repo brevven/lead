@@ -43,7 +43,7 @@ data:extend(
     results =
     { 
       {type = "item",  name = "enriched-lead", amount = util.me.byproduct() and 5 or 6},
-      {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25},
+      {type = "fluid", name = "kr-dirty-water", amount = 25, catalyst_amount = 25},
       util.me.byproduct() and {type = "item",  name = "copper-ore", amount = 2} or nil,
     },
     crafting_machine_tint =
@@ -71,30 +71,29 @@ data:extend(
       allow_productivity = true,
       ingredients = 
       {
-        {"enriched-lead", 5}
+        {type = "item", name = "enriched-lead", amount = 5}
       },
-      result = "lead-plate",
-      result_count = 5,
+      results = { { type = "item", name = "lead-plate", amount = 5 } },
       order = "b[lead-plate]-b[enriched-lead-plate]"
   },	
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-lead",
-		category = "fluid-filtration",
+		category = "kr-fluid-filtration",
 		icons =
 		{
 			{
-				icon = data.raw.fluid["dirty-water"].icon,
-				icon_size = data.raw.fluid["dirty-water"].icon_size
+				icon = data.raw.fluid["kr-dirty-water"].icon,
+				icon_size = data.raw.fluid["kr-dirty-water"].icon_size
 			},
 			{
 				icon = data.raw.item["lead-ore"].icon,
 				icon_size =	data.raw.item["lead-ore"].icon_size,
-				scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size/data.raw.item["lead-ore"].icon_size),
+				scale = 0.2 * 64 / (data.raw.item["lead-ore"].icon_size or 64),
 				shift = {0, 4}
 			}
 		},
-		icon_size = data.raw.fluid["dirty-water"].icon_size,
+		icon_size = data.raw.fluid["kr-dirty-water"].icon_size,
 		energy_required = 2,
 		enabled = false,
 		allow_as_intermediate = false,
@@ -102,7 +101,7 @@ data:extend(
 		always_show_products = true,
 		ingredients =
 		{
-			{type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100},
+			{type = "fluid", name = "kr-dirty-water", amount = 100, catalyst_amount = 100},
 		},
 		results =
 		{
