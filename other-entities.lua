@@ -1,7 +1,7 @@
 local leadutil = require("__bzlead__.data-util");
 require("data-util")
 
-if leadutil.me.more_entities() then
+if leadutil.me.more_entities() and data.raw.item["lead-plate"] then
 data:extend({
 
   {

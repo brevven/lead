@@ -98,7 +98,6 @@ data:extend({
 --    }
 --  } or nil,
 })
-end
 if util.me.more_entities() then
 data:extend({
   {
@@ -564,5 +563,6 @@ data:extend({
   },
 },
 })
+end
 end
 end

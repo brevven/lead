@@ -749,16 +749,13 @@ end
 function util.add_effect(technology_name, effect)
   local technology = data.raw.technology[technology_name]
   if technology then
-    log("2")
     if not technology.effects then technology.effects = {} end
     if effect and effect.type == "unlock-recipe" then
       if not data.raw.recipe[effect.recipe] then
         return
       end
     end
-    log("3")
     table.insert(technology.effects, effect)
-    log(serpent.block(technology.effects))
   end
 end
 
@@ -767,7 +764,6 @@ function util.add_to_productivity_research(technology_name, recipe_name, amount)
   if not amount then amount = 0.1 end
   local recipe = data.raw.recipe[recipe_name]
   if recipe then
-    log("1")
     util.add_effect(technology_name, { type = "change-recipe-productivity", recipe = recipe_name, change = amount})
   end
 end
@@ -1334,7 +1330,7 @@ end
 -- Replace one product with another in a recipe
 function util.replace_product(recipe_name, old, new, options)
   if not should_force(options) and bypass(recipe_name) then return end
-  if data.raw.recipe[recipe_name] then
+  if data.raw.recipe[recipe_name] and (data.raw.item[new] or data.raw.fluid[new]) then
     replace_product(data.raw.recipe[recipe_name], old, new, options)
   end
 end
