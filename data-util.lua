@@ -78,6 +78,10 @@ function util.se6()
   return mods["space-exploration"] and mods["space-exploration"] >= "0.6" 
 end
 
+function util.k2()
+  return mods.Krastorio2 or mods["Krastorio2-spaced-out"]
+end
+
 util.cablesg = util.se6() and "electronic" or "cable"
 
 function get_setting(name)
@@ -115,12 +119,9 @@ function util.fe_plus(sub)
   end
 end
 
-function util.get_stack_size(default) 
-  if mods.Krastorio2 then
-    local size = get_setting("kr-stack-size")
-    if size and tonumber(size) then
-      return tonumber(size)
-    end
+function util.get_stack_size(default)
+  if util.k2() and kr_adjust_stack_sizes then
+    return tonumber(200)
   end
   return default
 end
@@ -514,13 +515,15 @@ end
 
 -- k2 matter 
 -- params: {k2matter}, k2baseicon , {icon}
-function util.k2matter(params, only_deconversion)
-  local matter = require("__Krastorio2__/prototypes/libraries/matter")
+function util.k2matter(params)
+  local matter
+  if mods.Krastorio2 then
+    matter = require("__Krastorio2__/prototypes/libraries/matter")
+  else
+    matter = require("__Krastorio2-spaced-out__/prototypes/libraries/matter")
+  end
   if mods["space-exploration"] then 
     params.k2matter.needs_stabilizer = true
-  end
-  if not params.k2matter.material.amount then
-    params.k2matter.material.amount = 10
   end
   if not data.raw.technology[params.k2matter.unlocked_by] then
     local icon = ""
@@ -561,15 +564,16 @@ function util.k2matter(params, only_deconversion)
               {
                 {"production-science-pack", 1},
                 {"utility-science-pack", 1},
-                {"matter-tech-card", 1}
+                {"kr-matter-tech-card", 1}
               },
               time = 45,
             },
+            effects = {}
             -- (ignore for now) localised_name = {"technology-name.k2-conversion", {"item-name."..params.k2matter.item_name}},
           },
         })
   end
-  if only_deconversion then
+  if params.k2matter.only_deconversion then
     matter.make_deconversion_recipe(params.k2matter)
   else
     matter.make_recipes(params.k2matter)
@@ -584,8 +588,8 @@ function util.se_matter(params)
     if not params.quant_in then params.quant_in = params.quant_out end
     if not params.icon_size then params.icon_size = 64 end
     local fname = "matter-fusion-"..params.ore
-    local sedata = mods.Krastorio2 and "se-kr-matter-synthesis-data" or "se-fusion-test-data"
-    local sejunk = mods.Krastorio2 and "se-broken-data" or "se-junk-data"
+    local sedata = util.k2() and "se-kr-matter-synthesis-data" or "se-fusion-test-data"
+    local sejunk = util.k2() and "se-broken-data" or "se-junk-data"
     data:extend({
       {
         type = "recipe",
@@ -622,7 +626,7 @@ function util.se_matter(params)
     })
     util.add_unlock("se-space-matter-fusion", fname) 
 
-    if mods.Krastorio2 then
+    if util.k2() then
       local lname = params.ore.."-to-particle-stream"
       data:extend({
         enabled = false,

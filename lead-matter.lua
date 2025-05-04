@@ -1,7 +1,6 @@
 -- Matter recipes for Krastorio2
-if mods["Krastorio2"] then
 local util = require("data-util");
-local matter = require("__Krastorio2__/prototypes/libraries/matter")
+if util.k2() then
 
 data:extend(
 {
@@ -49,7 +48,7 @@ util.k2matter({
     allow_productivity = true,
     unlocked_by = "lead-matter-processing"
 	}
-}, false)
+})
 
 util.k2matter({
 	k2matter = {
@@ -62,8 +61,9 @@ util.k2matter({
     energy_required = 2,
     needs_stabilizer = true,
     allow_productivity = true,
+    only_deconversion = true,
     unlocked_by = "lead-matter-processing"
 	}
-}, true)
+})
 
 end

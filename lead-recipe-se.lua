@@ -47,11 +47,11 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     main_product = "molten-lead",
     subgroup = "lead",
     results = {
-      {type = "fluid", name = "molten-lead", amount = mods.Krastorio2 and 750 or 900},
+      {type = "fluid", name = "molten-lead", amount = util.k2() and 750 or 900},
     },
     energy_required = 60,
     ingredients = {
-      {name = mods.Krastorio2 and "enriched-lead" or "lead-ore", amount = 24},
+      {name = util.k2() and "enriched-lead" or "lead-ore", amount = 24},
       {type = "fluid", name = "se-pyroflux", amount = 10},
     },
     enabled = false,
@@ -100,7 +100,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "molten-lead"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "lead-ingot"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "lead-ingot-to-plate"})
-  if mods["Krastorio2"] then
+  if util.k2() then
     util.set_item_subgroup("enriched-lead", "lead")
     data.raw.recipe["enriched-lead-plate"].order= "d[lead-plate]"
     se_delivery_cannon_recipes["enriched-lead"] = {name= "enriched-lead"}
@@ -110,7 +110,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   se_delivery_cannon_recipes["lead-ingot"] = {name="lead-ingot"}
 else
   data.raw.item["lead-plate"].subgroup = "plates"
-  if mods["Krastorio2"] then
+  if util.k2() then
     data:extend({
     {
       type = "recipe",

@@ -60,7 +60,7 @@ if util.me.more_ammo() then
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-lead"})
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-only"})
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-copper-lead"})
-  if mods.Krastorio2 and util.me.get_setting("kr-more-realistic-weapon") then
+  if util.k2() and util.me.get_setting("kr-more-realistic-weapon") then
     util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-iron-lead"})
     util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-iron"})
     util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-copper-lead"})
@@ -68,9 +68,9 @@ if util.me.more_ammo() then
 end
 
 -- Krastorio 2 changes
-util.add_ingredient("kr-laser-artillery-turret", "lead-plate", 10)
-util.add_ingredient("kr-railgun-turret", "lead-plate", 10)
-util.add_ingredient("kr-rocket-turret", "lead-plate", 10)
+util.add_ingredient("kr-laser-artillery-turret", leb, 10)
+util.add_ingredient("kr-railgun-turret", leb, 10)
+util.add_ingredient("kr-rocket-turret", leb, 10)
 
 -- Space Exploration
 if mods["space-exploration"] then

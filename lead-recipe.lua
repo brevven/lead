@@ -10,7 +10,7 @@ data:extend({
     name = util.me.lead_plate,
     category = "smelting",
     order = "d[lead-plate]",
-    icons = (mods["Krastorio2"] and
+    icons = (util.k2() and
         {
           { icon = "__bzlead__/graphics/icons/lead-plate.png", icon_size = 64, icon_mipmaps = 3, },
           { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
@@ -20,7 +20,7 @@ data:extend({
 ),
     main_product = util.me.lead_plate,
 
---    (mods["Krastorio2"] and
+--    (util.k2() and
 --        {
 --          enabled = true,
 --          energy_required = 16,
@@ -363,14 +363,14 @@ data:extend({
     category = "smelting",
     subgroup = "raw-material",
     order = "d[lead-plate]",
-    icons = (mods["Krastorio2"] and
+    icons = (util.k2() and
         {
           { icon = "__IndustrialRevolution__/graphics/icons/64/lead-ingot.png", icon_size = 64, icon_mipmaps = 4, },
           { icon = "__bzlead__/graphics/icons/lead-ore.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
         } or {
           { icon = "__IndustrialRevolution__/graphics/icons/64/lead-ingot.png", icon_size = 64, icon_mipmaps = 4, },
         }),
-    normal = (mods["Krastorio2"] and
+    normal = (util.k2() and
         {
           enabled = true,
           energy_required = 16,
@@ -404,7 +404,7 @@ data:extend({
 end
 
 if util.me.more_ammo() then
-if mods.Krastorio2 and util.me.get_setting("kr-more-realistic-weapon") then
+if util.k2() and util.me.get_setting("kr-more-realistic-weapon") then
 data:extend({
 {
   type = "recipe",

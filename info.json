@@ -1,6 +1,6 @@
 {
     "name": "bzlead",
-    "version": "2.0.24",
+    "version": "2.0.25",
     "factorio_version": "2.0",
     "title": "Lead",
     "author": "Brevven",
@@ -13,6 +13,7 @@
       "? hot-metals",
       "? space-exploration",
       "? Krastorio2",
+      "? Krastorio2-spaced-out",
       "? Rich-Rocks-Requiem",
       "? 248k",
       "? tenebris",
