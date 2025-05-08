@@ -1,3 +1,5 @@
+local util = require("__bzlead__.data-util");
+
 -- Deadlock stacking recipes
 if deadlock and deadlock["add_stack"] then
   deadlock.add_stack("lead-ore",  "__bzlead__/graphics/icons/stacked/lead-ore-stacked.png", "deadlock-stacking-1", 64)
