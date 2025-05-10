@@ -60,7 +60,7 @@ if util.me.more_ammo() then
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-lead"})
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-iron-only"})
   util.add_effect("military", {type = "unlock-recipe", recipe = "firearm-magazine-copper-lead"})
-  if util.k2() and util.me.get_setting("kr-more-realistic-weapon") then
+  if util.k2() and util.me.get_setting("kr-realistic-weapons") then
     util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-iron-lead"})
     util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-iron"})
     util.add_effect("military", {type = "unlock-recipe", recipe = "rifle-magazine-copper-lead"})
