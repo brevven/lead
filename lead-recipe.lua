@@ -404,7 +404,7 @@ data:extend({
 end
 
 if util.me.more_ammo() then
-if util.k2() and util.me.get_setting("kr-more-realistic-weapon") then
+if util.k2() and util.me.get_setting("kr-realistic-weapons") then
 data:extend({
 {
   type = "recipe",
@@ -412,12 +412,11 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a01[pistol-magazine]-i",
   energy_required = 1,
-  ingredients = {{"lead-plate", 2}, {"iron-plate", 3}},
-  result = "firearm-magazine",
-  result_count = 2,
+  ingredients = {util.item("lead-plate", 2), util.item("iron-plate", 3)},
+  results = {util.item("firearm-magazine", 2)},
   enabled = false,
   icons = {
-    { icon = util.k2assets().."/icons/items-with-variations/ammo/pistol-ammo-1.png", icon_size = 64},
+    { icon = util.k2assets().."/icons/items/pistol-ammo-1.png", icon_size = 64},
     { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
       scale=0.25, shift= {8, -6}},
     { icon = "__bzlead__/graphics/icons/lead-plate.png",
@@ -430,11 +429,11 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a01[pistol-magazine]-io",
   energy_required = 0.5,
-  ingredients = {{"iron-plate", 3}},
-  result = "firearm-magazine",
+  ingredients = {util.item("iron-plate", 3)},
+  results = {util.item("firearm-magazine", 1)},
   enabled = false,
   icons = {
-    { icon = util.k2assets().."/icons/items-with-variations/ammo/pistol-ammo-1.png", icon_size = 64},
+    { icon = util.k2assets().."/icons/items/pistol-ammo-1.png", icon_size = 64},
     { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
       scale=0.25, shift= {8, -6}},
   },
@@ -445,11 +444,11 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a01[pistol-magazine]-lc",
   energy_required = 0.5,
-  ingredients = {{"lead-plate", 1}, {"copper-plate", 1}},
-  result = "firearm-magazine",
+  ingredients = {util.item("lead-plate", 1), util.item("copper-plate", 1)},
+  results = {util.item("firearm-magazine", 1)},
   enabled = false,
   icons = {
-    { icon = util.k2assets().."/icons/items-with-variations/ammo/pistol-ammo-1.png", icon_size = 64},
+    { icon = util.k2assets().."/icons/items/pistol-ammo-1.png", icon_size = 64},
     { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64,
       scale=0.25, shift= {8, -6}},
     { icon = "__bzlead__/graphics/icons/lead-plate.png",
@@ -462,12 +461,11 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a03[rifle-magazine]-i",
   energy_required = 2,
-  ingredients = {{"lead-plate", 2}, {"iron-plate", 3}, {"copper-plate", 2}},
-  result = "rifle-magazine",
-  result_count = 2,
+  ingredients = {util.item("lead-plate", 2), util.item("iron-plate", 3), util.item("copper-plate", 2)},
+  results = {util.item("kr-rifle-magazine", 2)},
   enabled = false,
   icons = {
-    { icon = util.k2assets().."/icons/items-with-variations/ammo/rifle-ammo-1.png", icon_size = 64},
+    { icon = util.k2assets().."/icons/ammo/rifle-magazine.png", icon_size = 64},
     { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
       scale=0.25, shift= {8, -6}},
     { icon = "__bzlead__/graphics/icons/lead-plate.png",
@@ -480,11 +478,11 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a03[rifle-magazine]-io",
   energy_required = 1,
-  ingredients = {{"iron-plate", 4}, {"copper-plate", 1}},
-  result = "rifle-magazine",
+  ingredients = {util.item("iron-plate", 4), util.item("copper-plate", 1)},
+  results = {util.item("kr-rifle-magazine", 1)},
   enabled = false,
   icons = {
-    { icon = util.k2assets().."/icons/items-with-variations/ammo/rifle-ammo-1.png", icon_size = 64},
+    { icon = util.k2assets().."/icons/ammo/rifle-magazine.png", icon_size = 64},
     { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64,
       scale=0.25, shift= {8, -6}},
   },
@@ -495,11 +493,11 @@ data:extend({
   category = "crafting",
   order = "a[basic-clips]-a03[rifle-magazine]-lc",
   energy_required = 1,
-  ingredients = {{"lead-plate", 3}, {"copper-plate", 1}},
-  result = "rifle-magazine",
+  ingredients = {util.item("lead-plate", 3), util.item("copper-plate", 1)},
+  results = {util.item("kr-rifle-magazine", 1)},
   enabled = false,
   icons = {
-    { icon = util.k2assets().."/icons/items-with-variations/ammo/rifle-ammo-1.png", icon_size = 64},
+    { icon = util.k2assets().."/icons/ammo/rifle-magazine.png", icon_size = 64},
     { icon = "__base__/graphics/icons/copper-plate.png", icon_size = 64,
       scale=0.25, shift= {8, -6}},
     { icon = "__bzlead__/graphics/icons/lead-plate.png",
