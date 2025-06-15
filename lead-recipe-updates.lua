@@ -187,6 +187,9 @@ util.replace_ingredient("mox-fuel-cell", "iron-plate", "lead-plate")
 util.replace_ingredient("MOX-fuel", "iron-plate", "lead-plate")
 util.replace_ingredient("mox-fuel", "iron-plate", "lead-plate")
 
+-- Cerys
+util.add_ingredient("mixed-oxide-fuel-cell", "lead-plate", 5)
+
 -- True Nukes
 util.replace_ingredient("tritium-breeder-fuel-cell", "iron-plate", "lead-plate")
 

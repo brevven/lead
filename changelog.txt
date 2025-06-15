@@ -4,6 +4,8 @@ Date: 2025-06-15
   Fixes:
     - Krastorio2: Update more tier 1 magazine recipes for 2.0, with thanks to Tvede-dk
     - Fix load error with certain loadouts, especially with K2SO
+  Changes:
+    - Cerys: fuel cell recipe update
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.26
 Date: 2025-05-05
