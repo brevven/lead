@@ -16,8 +16,8 @@ end
 
 if util.k2() then 
   local lead_bolt = util.me.more_entities() and "lead-expansion-bolt" or "lead-plate"
-  util.replace_ingredient("rifle-magazine", "iron-plate", "lead-plate")
-  util.replace_ingredient("anti-material-rifle-magazine", "iron-plate", "lead-plate")
+  util.replace_ingredient("kr-rifle-magazine", "iron-plate", "lead-plate")
+  util.replace_ingredient("kr-anti-materiel-rifle-magazine", "iron-plate", "lead-plate")
   util.replace_some_ingredient("kr-crusher", "iron-beam", 5, lead_bolt, 5)
   util.replace_ingredient("kr-shelter", "iron-plate", lead_bolt)
   util.add_ingredient("kr-advanced-furnace", lead_bolt, 20)
